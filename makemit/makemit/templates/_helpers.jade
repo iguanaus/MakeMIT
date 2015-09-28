@@ -1,0 +1,10 @@
+mixin render_field_semantic(form)
+  class = 'ui'
+  if form.errors
+    class = class+' error'
+  class = class + ' field'
+  text = form.label.text
+  div(class=class)
+    field(placeholder=text,class=class)
+  if form.errors
+    div.ui.red.message = form.errors

@@ -1,0 +1,102 @@
+@import 'constants'
+@import 'mixins'
+@import 'base'
+
+/* materials slide */
+#materials-slide
+
+  .bcg 
+    background: GRAY
+    background-size: auto auto
+    opacity: 1
+    text-align: center
+    height: 100%
+    overflow: auto
+
+    .hsContainer
+      min-height:100vh
+      height: 100%
+
+      #materials-accordion
+        margin: auto
+
+      .hsContent
+        background: #fff
+        height: 100%
+        padding: 50px
+        padding-top: 0
+        max-width: 70vw
+        display: inherit
+        margin-left: auto
+        margin-right: auto
+
+        #register
+          font-family: MAKE-HEADER-FONT
+          background: none
+          margin-left: auto
+          margin-right: auto
+          font-size:.9em
+          font-weight:700
+          width: 20vw
+          min-width: 300px
+          border: 3px solid GRAY
+          text-transform: uppercase
+          color: #fff
+          letter-spacing: 2px
+          color: GRAY
+
+        #register:hover
+          transition: all 600ms ease
+          color: WHITE
+          background-color: YELLOW
+
+
+
+        .header
+          a
+            color: YELLOW
+
+          a:hover
+            opacity: .5
+            transition: all 600ms ease
+
+        h1
+          padding-top: 30px
+
+        p 
+          font-size: 1.2em
+          line-height: 1.5em
+
+          a 
+            color: GRAY
+
+          a:hover
+            color: YELLOW
+
+        #materials-accordion
+          .title
+            color: GRAY
+            font-size: 1.2em
+
+          .title:hover
+            background-color: YELLOW
+            color: #fff
+            transition: all 600ms ease
+
+          .title.active
+            background-color: YELLOW
+            color: #fff
+
+          .content
+            padding: 30px 50px
+
+            a
+              color: GRAY
+              font-size: 1em
+
+            a:hover
+              color: YELLOW
+
+            li 
+              font-size: 1em
+

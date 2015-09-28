@@ -1,0 +1,257 @@
+-load staticfiles
+| {% load pipeline %}
+html
+  head
+      title
+        | MakeMIT 2015 Registration
+      // Meta Tags
+      meta(charset='utf-8')
+      meta(name='generator', content='Wufoo')
+      meta(name='robots', content='index, follow')
+      // CSS
+      link(href='{% static "wufoo/css/structure.css"%}', rel='stylesheet')
+      link(href='{% static "wufoo/css/form.css" %}', rel='stylesheet')
+      link(href='{% static "wufoo/css/theme.css" %}', rel='stylesheet')
+      link(href='https://googledrive.com/host/0B9HeKeVG3rttRUFLOXI0Rkk4QlU', rel='stylesheet')
+      // JavaScript
+      script(src='{% static "wufoo/scripts/wufoo.js" %}')
+      //if lt IE 10
+        script(src='https://html5shiv.googlecode.com/svn/trunk/html5.js')
+    body#public
+      #container.ltr
+        h1#logo
+          a Wufoo
+        form#form54.ui.form.wufoo.topLabel.page.hideMarkers(name='form54', accept-charset='UTF-8', autocomplete='off', enctype='multipart/form-data', method='post', novalidate='', action='https://techx.wufoo.com/forms/s16hd3aw1520tyz/#public')
+          header#header.info
+            h2 MakeMIT 2015 Registration
+            div
+              | Register for MakeMIT by filling out the information below. The deadline for filling out this form is 
+              b February 1st, 2015
+              | . If you receive a spot, you will receive an email the following week to confirm your spot. If you have any questions about registration, please contact us at 
+              a(href='mailto:team@makemit.org') team@makemit.org
+              | .
+          ul
+            li#foli1.notranslate
+              label#title1.desc(for='Field1')
+                | Name
+                span#req_1.req *
+              span
+                input#Field1.field.text.fn(name='Field1', type='text', value='', size='8', tabindex='1', required='')
+                label(for='Field1') First
+              span
+                input#Field2.field.text.ln(name='Field2', type='text', value='', size='14', tabindex='2', required='')
+                label(for='Field2') Last
+            li#foli24.notranslate
+              label#title24.desc(for='Field24')
+                | Email
+                span#req_24.req *
+              div
+                input#Field24.field.text.medium(name='Field24', type='email', spellcheck='false', value='', maxlength='255', tabindex='3', required='')
+              p#instruct24.instruct
+                small Your official .edu email if you have one please!
+            li#foli35.date.notranslate
+              label#title35.desc(for='Field35')
+                | Date of Birth
+                span#req_35.req *
+              span
+                input#Field35-1.field.text(name='Field35-1', type='text', value='', size='2', maxlength='2', tabindex='4', required='')
+                label(for='Field35-1') MM
+              span.symbol /
+              span
+                input#Field35-2.field.text(name='Field35-2', type='text', value='', size='2', maxlength='2', tabindex='5', required='')
+                label(for='Field35-2') DD
+              span.symbol /
+              span
+                input#Field35.field.text(name='Field35', type='text', value='', size='4', maxlength='4', tabindex='6', required='')
+                label(for='Field35') YYYY
+              span#cal35
+                img#pick35.datepicker(src='{% static "wufoo/images/calendar.png" %}', alt='Pick a date.', data-date-format='yyyy-mm-dd', data-date='2015-01-09')
+            li#foli53.notranslate
+              label#title53.desc(for='Field53')
+                | Gender
+                span#req_53.req *
+              div
+                select#Field53.field.select.medium(name='Field53', tabindex='7')
+                  option(value='Prefer not to answer', selected='selected')
+                    | Prefer not to answer
+                  option(value='Male')
+                    | Male
+                  option(value='Female')
+                    | Female
+            li#foli10.notranslate
+              label#title10.desc(for='Field10')
+                | University
+                span#req_10.req *
+              div
+                input#Field10.field.text.medium(name='Field10', type='text', value='', maxlength='255', tabindex='8', onkeyup='', required='')
+              p#instruct10.instruct
+                small No abbreviations please!
+            li#foli16.notranslate
+              label#title16.desc(for='Field16')
+                | Major
+                span#req_16.req *
+              div
+                input#Field16.field.text.medium(name='Field16', type='text', value='', maxlength='255', tabindex='9', onkeyup='', required='')
+              p#instruct16.instruct
+                small Try to stick to words, even if you&apos;re an MIT student
+            li#foli12.notranslate
+              label#title12.desc(for='Field12')
+                | Graduation Year
+                span#req_12.req *
+              div
+                select#Field12.field.select.medium(name='Field12', tabindex='10')
+                  option(value='', selected='selected')
+                  option(value='2018')
+                    | 2018
+                  option(value='2017')
+                    | 2017
+                  option(value='2016')
+                    | 2016
+                  option(value='2015')
+                    | 2015
+              p#instruct12.instruct
+                small
+                  b Reminder:
+                  |  MakeMIT is only open for undergraduates this year!
+            li#foli15.notranslate
+              label#title15.desc(for='Field15')
+                | Resume
+                span#req_15.req *
+              div
+                input#Field15.field.file(name='Field15', type='file', size='12', tabindex='11', required='')
+              p#instruct15.instruct
+                small
+                  | Please upload your resume named with following the format: 
+                  b FirstName_Lastname.pdf
+            li#foli20.notranslate
+              label#title20.desc(for='Field20')
+                | Personal Website
+              div
+                input#Field20.field.text.medium(name='Field20', type='url', value='', maxlength='255', tabindex='12')
+            li#foli21.notranslate
+              label#title21.desc(for='Field21')
+                | Github
+              div
+                input#Field21.field.text.medium(name='Field21', type='url', value='', maxlength='255', tabindex='13')
+            li#foli17.notranslate
+              fieldset
+                legend#title17.desc
+                  | Did you attend MakeMIT last year?
+                  span#req_17.req *
+                //if lt IE 8
+                  label#title17.desc
+                    | Did you attend MakeMIT last year?
+                    span#req_17.req *
+                div
+                  input#radioDefault_17(name='Field17', type='hidden', value='')
+                  span
+                    input#Field17_0.field.radio(name='Field17', type='radio', value='Yes', tabindex='14', required='')
+                    label.choice(for='Field17_0')
+                      | Yes
+                  span
+                    input#Field17_1.field.radio(name='Field17', type='radio', value='No', tabindex='15', checked='checked', required='')
+                    label.choice(for='Field17_1')
+                      | No
+            li#foli7.notranslate
+              label#title7.desc(for='Field7')
+                | T-shirt Size
+                span#req_7.req *
+              div
+                select#Field7.field.select.small(name='Field7', tabindex='16')
+                  option(value='', selected='selected')
+                  option(value='S')
+                    | S
+                  option(value='M')
+                    | M
+                  option(value='L')
+                    | L
+                  option(value='XL')
+                    | XL
+            li#foli40.notranslate
+              label#title40.desc(for='Field40')
+                | Food Allergies/Dietary Restrictions
+                span#req_40.req *
+              div
+                textarea#Field40.field.textarea.small(name='Field40', spellcheck='true', rows='10', cols='50', tabindex='17', onkeyup='', required='') None
+            li#foli41.notranslate
+              label#title41.desc(for='Field41')
+                | Do you have a request for any materials not currently being provided?
+              div
+                textarea#Field41.field.textarea.small(name='Field41', spellcheck='true', rows='10', cols='50', tabindex='18', onkeyup='')
+              p#instruct41.instruct
+                small
+                  | Our list of materials that we will be providing is 
+                  a(href='http://makemit.org/materials') here
+                  | . If you would like to use anything we haven&apos;t listed here, let us know! We will get in touch with you via email on whether we can provide the material for you. If we can&apos;t provide it, we will let you know if that material is approved for you to bring to the event.
+            li#foli50.notranslate
+              label#title50.desc(for='Field50')
+                | Do you have a team already formed?
+                span#req_50.req *
+              div
+                select#Field50.field.select.medium(name='Field50', tabindex='19')
+                  option(value='', selected='selected')
+                  option(value='Yes')
+                    | Yes
+                  option(value='No')
+                    | No
+              p#instruct50.instruct
+                small
+                  b Reminder
+                  | : Teams must be 3-5 people.
+            li#foli46.notranslate
+              label#title46.desc(for='Field46')
+                | How many teammates do you have?
+                span#req_46.req *
+              div
+                select#Field46.field.select.medium(name='Field46', tabindex='20')
+                  option(value='', selected='selected')
+                  option(value='2')
+                    | 2
+                  option(value='3')
+                    | 3
+                  option(value='4')
+                    | 4
+            li#foli26.notranslate
+              label#title26.desc(for='Field26')
+                | Team Member 1
+                span#req_26.req *
+              div
+                input#Field26.field.text.medium(name='Field26', type='text', value='', maxlength='255', tabindex='21', onkeyup='', required='')
+            li#foli32.notranslate
+              label#title32.desc(for='Field32')
+                | Team Member 2
+                span#req_32.req *
+              div
+                input#Field32.field.text.medium(name='Field32', type='text', value='', maxlength='255', tabindex='22', onkeyup='', required='')
+            li#foli31.notranslate
+              label#title31.desc(for='Field31')
+                | Team Member 3
+                span#req_31.req *
+              div
+                input#Field31.field.text.medium(name='Field31', type='text', value='', maxlength='255', tabindex='23', onkeyup='', required='')
+            li#foli30.notranslate
+              label#title30.desc(for='Field30')
+                | Team Member 4 
+                span#req_30.req *
+              div
+                input#Field30.field.text.medium(name='Field30', type='text', value='', maxlength='255', tabindex='24', onkeyup='', required='')
+            li#foli48.notranslate
+              label#title48.desc(for='Field48')
+                | Do you have a partner you&apos;d like to work with?
+              div
+                input#Field48.field.text.medium(name='Field48', type='text', value='None', maxlength='255', tabindex='25', onkeyup='')
+              p#instruct48.instruct
+                small
+                  | If you do, try to find one more person and form a team! Otherwise we&apos;ll do our best to accommodate both of you, but no guarantees
+            |  
+            li.buttons
+              div
+                input#saveForm.btTxt.submit(name='saveForm', type='submit', value='Submit Registration')
+            li.hide
+              label(for='comment') Do Not Fill This Out
+              textarea#comment(name='comment', rows='1', cols='1')
+              input#idstamp(type='hidden', name='idstamp', value='H/n2XYPZ+IZ1fHr72rhgcrD63eybzbS3iES9P2IWeiA=')
+      // container
+      a.powertiny(href='http://www.wufoo.com/', title='Powered by Wufoo', style='display:block !important;visibility:visible !important;text-indent:0 !important;position:relative !important;height:auto !important;width:95px !important;overflow:visible !important;text-decoration:none;cursor:pointer !important;margin:0 auto !important')
+        span(style='background:url(./images/powerlogo.png) no-repeat center 7px; margin:0 auto;display:inline-block !important;visibility:visible !important;text-indent:-9000px !important;position:static !important;overflow: auto !important;width:62px !important;height:30px !important') Wufoo
+        b(style='display:block !important;visibility:visible !important;text-indent:0 !important;position:static !important;height:auto !important;width:auto !important;overflow: auto !important;font-weight:normal;font-size:9px;color:#777;padding:0 0 0 3px;') Designed

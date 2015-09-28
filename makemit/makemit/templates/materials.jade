@@ -1,0 +1,292 @@
+extends base.jade
+-load staticfiles
+| {% load pipeline %}
+
+block head
+  link(rel='stylesheet', href='{% static "stylesheets/materials.css" %}')
+
+block body
+  div#skrollr-body
+    section#materials-slide
+      div.bcg
+        div.hsContainer
+          div.hsContent 
+            div.header
+              h5 <a href="/">⟵ Back to MakeMIT site</a>
+            h1 Materials & Tools
+            p 
+              | See the list below for what we're providing you to hack with. 
+              | We suggest all hackers bring a laptop. Other than that, leave 
+              | it up to us! If you'd like to see something not on the list below, 
+              | fill out the form linked below,
+              | or put it in your registration form. We might be able to provide it, 
+              | otherwise you're free to bring something off-the-shelf as long as it 
+              | is pre-approved. Please note that any other materials will be confiscated 
+              | at registration.
+            div.ui.stackable.one.column.grid
+              div.row
+                div.center.aligned.center.floated.column
+                  a(href="http://goo.gl/forms/eHCBps6KRE")
+                    div#register.ui.button Materials Suggestion Form
+
+            div.ui.divider
+
+            div.header
+              h2 Featured Materials
+            div.ui.stackable.divided.two.column.grid.segment
+              div.equal.height.row
+                div.column
+                  div.ui.divided.items
+                    
+                    div.item
+                      div.row
+                        div.ui.image
+                          img(src="http://www.sdtimes.com/images/0310.sdt-kinoma-create.png")
+                      div.content
+                        h3.ui.header 
+                          a(href="http://kinoma.com/create/about/") Kinoma Create
+                        div.meta Kinoma
+                        div.description
+                          | Kinoma Create is the JavaScript-powered Internet of Things construction kit. Kinoma Create's 
+                          | mission is to power the next wave of connected device prototyping. It's a pro-developer 
+                          | experience that integrates hardware, software, and tools conceived expressly to be powerful, 
+                          | approachable, and fast.
+
+                    div.item
+                      div.row
+                        div.ui.image
+                          img(src="http://ecx.images-amazon.com/images/I/41Eh4W7cuiL._SX342_.jpg")
+                      div.content
+                        h3.ui.header 
+                          a(href="http://www.8020.net/T-Slot-1.asp") 25mm Aluminum Extrusions
+                        div.meta 80/20
+                        div.description
+                          | This adjustable, modular framing material, assembled with simple 
+                          | hand tools, is a perfect solution for custom machine frames, guarding, 
+                          | enclosures, displays, workstations, prototyping, and beyond.
+                    
+                    div.item
+                      div.row
+                        div.ui.image
+                          img(src="https://s3.amazonaws.com/wordpressprod/blog/wp-content/uploads/2014/06/front-view.jpg")
+                      div.content
+                        h3.ui.header 
+                          a(href="https://www.thalmic.com/en/myo/") Myo Armband
+                        div.meta Thalmic Labs
+                        div.description
+                          | Myo motion control and gesture control armband bracelet uses arm muscle activity and 
+                          | EMG signals to control digital devices over Bluetooth 4.0 Low Energy.
+
+                    div.item
+                      div.row
+                        div.ui.image
+                          img(src="http://www.raspberrypi.org/wp-content/uploads/2015/01/Pi2ModB1GB_-comp.jpeg")
+                      div.content
+                        h3.ui.header 
+                          a(href="http://www.raspberrypi.org/products/raspberry-pi-2-model-b/") Raspberry Pi 2
+                        div.meta Raspberry Pi
+                        div.description
+                          | The Raspberry Pi 2 Model B is the second generation Raspberry Pi, with a 900MHz quad-core 
+                          | ARM Cortex-A7 CPU (for ~6x performance), 1GB LPDDR2 SDRAM (for 2x memory), and complete 
+                          | compatibility with Raspberry Pi 1
+
+                    div.item
+                      div.row
+                        div.ui.image
+                          img(src="http://www.atmel.com/Images/ATmega328P_Xplained_Angle_th.jpg")
+                      div.content
+                        h3.ui.header 
+                          a(href="http://www.atmel.com/tools/mega168-xmini.aspx") Xplained Mini
+                        div.meta Atmel
+                        div.description
+                          | The Atmel ATmega328P Xplained Mini evalutation kit is a hardware platform for evaluating the 
+                          | Atmel ATmega328P microcontroller. The evaluation kit comes with a fully integrated debugger 
+                          | that provides seamless integration with Atmel Studio 6.2 or later. The kit provides access 
+                          | to the features of the ATmega328P enabling easy integration of the device in a custom design.
+
+                    div.item
+                      div.row
+                        div.ui.image
+                          img(src="http://makerbot-blog.s3.amazonaws.com/wp-content/uploads/2014/08/White_HERO_Rep.jpg")
+                      div.content
+                        h3.ui.header 
+                          a(href="http://store.makerbot.com/") 3D Printers
+                        div.meta MakerBot 
+                        div.description
+                          | The easiest and most versatile way to get from 3D model to 3D print
+
+                    div.item
+                      div.row
+                        div.ui.image
+                          img(src="http://mdm.boschwebservices.com/files/Dremel%20F0133000PA,%203000%20(EN,%20ES)%20r24615v15.jpg")
+                      div.content
+                        h3.ui.header 
+                          a(href="http://www.dremel.com/en-us/Tools/Pages/ToolDetail.aspx?pid=3000") Dremel 3000
+                        div.meta Dremel 
+                        div.description
+                          | The Dremel 3000 is the result of upgrading Dremel's most popular rotary 
+                          | tool using user-requested features to improve the tool’s design and ergonomics.  
+                          | The ability to use all existing Dremel rotary tool accessories and most attachments 
+                          | let the 3000 complete a wide range of applications including cutting, grinding, sanding,
+                          | carving and polishing a variety of materials.
+
+                div.column
+                  div.ui.divided.items
+
+                    div.item
+                      div.row
+                        div.ui.image
+                          img(src="https://cdn.sparkfun.com//assets/parts/1/0/1/3/9/13097-06.jpg")
+                      div.content
+                        h3.ui.header 
+                          a(href="https://www.sparkfun.com/products/13097") Edison Arduino Dev Kit
+                        div.meta Intel
+                        div.description
+                          | The Intel® Edison is an ultra small computing platform that will change
+                          | the way you look at embedded electronics. Powered by 
+                          | the Intel® Atom™ SoC dual-core CPU and including an integrated WiFi, 
+                          | Bluetooth LE, and a 70-pin connector to attach a veritable slew of 
+                          | shield-like “Blocks” which can be stacked on top of each other. It’s no 
+                          | wonder how this little guy is lowering the barrier of entry on the world of electronics!
+                    
+                    div.item
+                      div.row
+                        div.ui.image
+                          img(src="https://dbvc4uanumi2d.cloudfront.net/cdn/4.3.11/wp-content/themes/oculus/img/order/dk2-product.jpg")
+                      div.content
+                        h3.ui.header 
+                          a(href="https://www.oculus.com/dk2/") DK2
+                        div.meta Oculus
+                        div.description
+                          | The Oculus Rift Development Kit 2 (DK2) is a development kit meant for developers 
+                          | that want to create virtual reality content for the upcoming consumer version of the Oculus Rift.
+
+                    div.item
+                      div.row
+                        div.ui.image
+                          img(src="http://dri1.img.digitalrivercontent.net/Storefront/Company/msintl/images/English/en-INTL-Kinect-for-Windows-Commercial-74Z-00001/en-INTL-L-Kinect-for-Windows-Commercial-74Z-00001-mnco.jpg")
+                      div.content
+                        h3.ui.header 
+                          a(href="http://www.microsoft.com/en-us/kinectforwindows/meetkinect/default.aspx") Kinect V2
+                        div.meta Microsoft 
+                        div.description
+                          | A set of technologies that enable humans to interact naturally with computers, 
+                          | the Kinect for Windows v2 sensor and free software development kit (SDK) 2.0 
+                          | provide developers with the foundation needed to create and deploy interactive 
+                          | applications that respond to peoples’ natural movements, gestures, and voice commands.
+
+                    div.item
+                      div.row
+                        div.ui.image
+                          img(src="https://www.fabtolab.com/image/cache/data/Boards/Tessel/tessel-top-900x700.jpg")
+                      div.content
+                        h3.ui.header 
+                          a(href="https://tessel.io/") Tessel
+                        div.meta Technical Machine 
+                        div.description
+                          | Tessel is a microcontroller that runs JavaScript. 
+                          | It's Node-compatible and ships with Wifi built in. 
+                          | Use it to easily make physical devices that connect to the web.
+
+                    
+
+                    div.item
+                      div.row
+                        div.ui.image
+                          img(src="http://www.stratasys.com/~/media/en/3D%20Printers/Idea%20Series/uPrint%20SE/uprint_se_3d_printer.ashx")
+                      div.content
+                        h3.ui.header 
+                          a(href="http://www.stratasys.com/3d-printers/idea-series/uprint-se") Stratasys UPrint
+                        div.meta Stratasys 
+                        div.description
+                          | The uPrint SE offers larger ABSplus models and offers networking for easy sharing. 
+                          | It’s a perfect solution for small teams who know 3D modeling is the key to effective prototyping and communication.
+
+                    div.item
+                      div.row
+                        div.ui.image
+                          img(src="https://markforged.com/wp-content/uploads/2013/11/MF2014_HomeHero_R1_MK1.jpg")
+                      div.content
+                        h3.ui.header 
+                          a(href="https://markforged.com/mark-one/") Mark One
+                        div.meta MarkForged
+                        div.description
+                          | Along with the printer's novel material capabilities, the Mark One's revolutionary print 
+                          | bed clicks into place with 10 micron accuracy – allowing you to pause a print, remove the 
+                          | bed, add components, click the bed back in and then continue the print in the exact same 
+                          | position to easily embed electronics, sensors, ball bearings, hard mounting point and more into your parts.
+
+                    div.item
+                      div.row
+                        div.ui.image
+                          img(src="http://mdm.boschwebservices.com/files/8050_hero-lg%20r118733v15.jpg")
+                      div.content
+                        h3.ui.header 
+                          a(href="http://www.dremel.com/en-us/Tools/Pages/ToolDetail.aspx?pid=8050#.VOi8V1PF9Eg") Dremel Micro
+                        div.meta Dremel 
+                        div.description
+                          | Brilliantly powerful, the Dremel Micro is the perfect combination of size, ergonomics 
+                          | and power that make it the ultimate tool for both precise and light duty DIY tasks. 
+                          | Designed to be held between the thumb and forefinger like a pencil, the Dremel Micro 
+                          | allows a grip that is close to the work-piece for superior maneuverability and control. 
+                          | To illuminate projects, the Dremel Micro has LED lights built uniquely into the nose cap 
+                          | to aid in vision and accuracy.
+
+                    //- div.item
+                    //-   div.row
+                    //-     div.ui.image
+                    //-       img(src="{% static 'images/thermoFORM_r3_full.JPG' %}")
+                    //-   div.content
+                    //-     h3.ui.header 
+                    //-       a(href="") Vacuum Former
+                    //-     div.meta DGF Technologies
+                    //-     div.description
+                    //-       | Vacuum forming is a simplified version of thermoforming, 
+                    //-       | whereby a sheet of plastic is heated to a forming temperature, 
+                    //-       | stretched onto a single-surface mold, and forced against the mold by a vacuum (suction of air)
+
+                    
+            
+            div.ui.divider
+
+            div.header
+              h2 Materials List
+            div.ui.stackable.one.column.grid
+              div.row
+                div.center.aligned.center.floated.column
+                  div.ui.accordion.styled#materials-accordion
+                    {% for material in materials %}
+                    div.title #{material.header}
+                    div.content
+                      div.ui.three.column.grid
+                        {% for row in material.materials %}
+                        div.row
+                          {% for submaterial in row %}
+                          div.column
+                            li 
+                              {% if submaterial.link %}
+                              a(href=submaterial['link']) #{submaterial.part}
+                              {% else %}
+                              | #{submaterial.part}
+                              {% endif %}
+                          {% endfor %}
+                        {% endfor %}
+                    {% endfor %} 
+
+            
+
+
+   //- Initiate skrollr
+  script.
+    (function( $ ) {
+      
+      var s = skrollr.init({render: function(data) {
+
+          },
+          forceHeight:false,
+      });
+      skrollr.menu.init(s,{animate:true});
+
+    })(jQuery);
+
+    $('.ui.accordion').accordion({exclusive:false});

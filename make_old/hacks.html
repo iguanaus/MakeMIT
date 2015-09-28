@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie lt-ie9 lt-ie8 lt-ie7 ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+
+<head>
+
+<meta charset="utf-8">
+<!-- Since v1.2 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- End Since v1.2 -->
+<meta name="description" content="">
+<meta name="author" content="">
+<script type='text/javascript'>
+
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem( 'firstLoad' ) )
+    {
+      localStorage[ 'firstLoad' ] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem( 'firstLoad' );
+  }
+})();
+
+</script>
+
+<title>MAKEMIT</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo.png">
+
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.min.css" />
+
+<!-- Stylesheets -->
+<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+<link rel="stylesheet" id="css-dark" type="text/css" media="screen" href="" />
+<link rel="stylesheet" type="text/css" media="screen" href="assets/css/entypo.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="assets/css/magnific-popup.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="assets/css/flexslider.css" />
+<link rel="stylesheet" type="text/css" href="assets/hover/style_common.css" />
+<link rel="stylesheet" type="text/css" href="assets/hover/style1.css" />
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body style="background-color:black;">
+
+   <!-- Begin Header -->
+        <div id="main-nav" class="nav-container">
+            <nav class="main-nav clearfix">
+                <a class="brand external" id ='apres' href="index.html"><img class="brand" src="images/logo.png"></img> MAKEMIT</a>
+                <ul class="nav pull-right">
+
+                    <li><a class="external" href="http://makemit.org">HOME</a></li>
+                </ul>
+                <select onChange="scrollTo(this.value)" size"1" id="mobile-navigation">
+                    <option selected value="">Navigation</option>
+                    <option value="#schedule">schedule</option>
+                    <option value="#tools">tools</option>
+                    <option value="#featured">featured</option>
+                    <option value="#sponsors">sponsors</option>
+                    <option value="#prizes">prizes</option>
+                    <option value="#contact">contact</option>
+                </select>
+            </nav>
+        </div>
+        <!-- // End Header -->
+        <div id="topcontainer" class="container" style="margin:20px auto; width: 80%;">
+<!-- 
+<div class="span12 center" style = "padding: 0px 10px;">
+          <a href="#team9" data-toggle="modal">
+          <div class="larger view view-first">
+              <img src="images/hacks/team9.jpg" />
+              <div class="mask larger">
+                  <h2>TITLE</h2><br>
+              </div>
+          </div> 
+        </a>
+        </div>
+<div id="team9" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">TITLE</h3>
+  </div>
+  <div class="modal-body">
+    <div class="text-center">
+    <p><img src="images/hacks/team9.jpg" style="margin: 0px auto;"/>
+    </div>
+    <div class="text-left">
+      <strong>Description:</strong><br>
+    DETAILS<br>
+    <strong>Technical Details:</strong><br>
+    DETAILS
+      </p>
+  </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div> -->
+
+        </div>
+        <div id="maincontainer"class="container" style="margin:20px auto; width: 80%;">
+
+        </div>
+        </div>
+
+        <!-- jQuery and Bootstrap -->
+        <script type="text/javascript" src="assets/js/jquery.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        
+        <!-- jQuery Plugins -->
+        <script type="text/javascript" src="assets/js/plugins/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.nav.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.parallax.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.hoverdir.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.isotope.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.magnific-popup.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.flexslider.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.tiledItems.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.tweet.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="assets/js/contact-form.js"></script>
+        <script type="text/javascript" src="assets/js/gmap3.min.js"></script>
+        <script type="text/javascript" src="loader.js"></script>
+        
+        <!-- jQuery Custom -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+    
+        
+</body>
+</html>

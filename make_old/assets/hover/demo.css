@@ -1,0 +1,37 @@
+@import url('reset.css');
+/* General Demo Style */
+
+.container{
+	position:relative;
+}
+a{
+	color: #fff;
+	text-decoration: none;
+}
+.clr{
+	clear: both;
+}
+.main{
+	position:relative;
+    width:680px;
+    margin: 0 auto;
+}
+h1{
+	margin:0px;
+	padding:20px 20px 10px 20px;
+	font-size:34px;
+	color:#333;
+    text-shadow:1px 1px 1px #fff;
+	text-align:left;
+	font-weight:400;
+    text-align:center;
+}
+h1 span{
+    display:block;
+	font-size: 14px;
+    font-family: "Gill Sans", serif;
+    font-weight: lighter;
+    font-style: italic;
+	color:#b2891b;
+	padding-top:10px;
+}

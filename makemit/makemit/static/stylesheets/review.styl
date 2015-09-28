@@ -1,0 +1,518 @@
+@import 'constants'
+@import 'mixins'
+@import 'base'
+
+/*logo slide*/
+
+#skrollr-body
+  background:black
+
+.parallax-image-wrapper   
+    position:fixed  
+    left:0  
+    width:100%  
+    overflow:hidden  
+    
+.parallax-image-wrapper-50   
+  height:50%  
+  top:-50%  
+  
+.parallax-image-wrapper-100   
+  height:100%  
+  top:-100%  
+  
+.parallax-image   
+  display:none  
+  position:absolute  
+  bottom:0  
+  left:0  
+  width:100%  
+  background-repeat:no-repeat  
+  background-position:center  
+  background-size:cover  
+  
+.parallax-image-50   
+  height:200%  
+  top:-50%  
+  
+.parallax-image-100   
+  height:100%  
+  top:0  
+
+.parallax-image.skrollable-between 
+  display:block
+
+#nav
+  height: 50px
+
+#home-slide
+  .bcg 
+    background:transparent
+    
+    .hsContainer
+      width:100%
+
+      .hsContent
+        min-height:100vh
+        padding-bottom:50px
+        padding-top: 45vh
+        text-align: center
+
+        h1 
+          text-transform: uppercase
+          color: #fff
+          letter-spacing: 8px
+          font-size: 5em
+          line-height: .6em
+          font-family: MAKE-HEADER-FONT
+
+        #title-accent
+          color: YELLOW
+
+        i
+          font-size: 1.1em
+
+        h2
+          color: #fff
+          font-size: 1.6em
+          letter-spacing: 2px
+          margin-bottom: 20px
+          font-weight: 700
+          font-family: MAKE-HEADER-FONT
+
+        a:hover
+          color: YELLOW
+
+        h4, a
+          font-size: 1.3em
+          color: #fff
+          font-weight: 400
+          font-family: MAKE-HEADER-FONT
+
+      @media only screen and (max-height:667px)
+        .hsContent
+          padding-top: 32vh
+
+    .ui.stackable.grid
+      margin-top: 10px
+
+    .ui.segment
+      background: none
+
+    h3 
+      margin: 0 auto
+
+    #register
+       font-family: MAKE-HEADER-FONT
+       background: none
+       margin-left: auto
+       margin-right: auto
+       font-size:.9em
+       font-weight:700
+       width: 20vw
+       min-width: 300px
+       border: 3px solid #fff
+       text-transform: uppercase
+       color: #fff
+       letter-spacing: 2px
+
+    #register:hover
+      transition: all 600ms ease
+      color: YELLOW
+
+    #mailsignup
+       background: none
+       margin-left: auto
+       margin-right: auto
+       width: 35vw
+       min-width: 350px
+       border: 3px solid #fff
+       text-transform: uppercase
+
+
+      .title
+        color: #fff
+        letter-spacing: 2px
+
+        h3 
+          font-size: 1.1em
+
+      .title:hover
+        transition: all 600ms ease
+        color: YELLOW
+
+    .ui.error.field 
+      box-shadow: none
+    
+    .ui.red.message
+      background: none
+      box-shadow: none
+      margin: 0
+      padding-top: 0
+      color: YELLOW
+      letter-spacing: 0
+      text-transform: none
+
+      ul
+        list-style-type: none
+        padding-left: 0
+
+    button
+      color: #fff
+      background-color: YELLOW
+      text-transform: uppercase  
+      letter-spacing: 2px
+
+      h3 
+        font-size: 1em
+
+    .content
+      border-top: 3px solid #fff
+
+      .ui.segment 
+        box-shadow: none
+
+      form 
+        padding: 5px
+        padding-top: 0
+
+      p 
+        text-transform: none  
+        font-size: 1em
+        color: #fff
+        text-align: center
+        font-family: MAKE-BODY-FONT
+        font-weight: 500
+        letter-spacing: 0
+
+      .ui.field:focus
+        box-shadow: 5px 0 0 0 YELLOW inset
+
+      .ui.field
+        color: TEXT
+
+    button:hover
+      background-color: #fff
+      color: GRAY
+      transition: all 600ms ease
+
+  #down-arrow
+    position:absolute
+    display:inline-block
+    bottom:10px
+    right:50%
+    left:49%
+    i
+      color: #fff
+    
+  #down-arrow a:hover
+    text-decoration:none
+
+  #down-arrow:hover
+    i
+      color: YELLOW
+      transition: all 600ms ease
+
+  @media only screen and (max-height:480px)
+    .bcg #tools
+      margin-top: -25%
+
+
+  @media only screen and (max-width:480px)
+
+    .bcg
+    
+      .hsContainer
+        min-height:100vh
+
+        .hsContent
+        
+          #down-arrow
+            position:relative
+            display:block
+            margin-left:50%
+            margin-right:50%
+
+          h1 
+            font-size: 4em
+            font-family: MAKE-HEADER-FONT
+    
+/*overview slide*/
+
+#phase-1-slide
+  .bcg
+    background-color: YELLOW
+    background-size: auto auto
+    opacity:1
+    text-align: center
+
+    .hsContainer
+      min-height:0vh
+
+      .hsContent
+        top: 0
+        margin-top: 0
+
+      table
+        margin:auto
+
+      .yellow
+        background-color: YELLOW
+        // min-height: 55vh
+        color: #fff
+        padding: 8vh
+
+        .logo
+          padding-bottom: 2vh
+          img
+            width: 180px
+
+        h1
+          margin: 0
+          text-transform: uppercase
+          font-size: 3em
+          letter-spacing: 5px
+
+      .white
+        color: TEXT
+        background-color: #fff
+
+        .content
+          width: 50vw
+          min-width: 350px
+          padding-bottom: 50px
+          margin-left: auto
+          margin-right: auto
+          padding-top: 5vh
+
+          p
+            font-size: 1.3em
+            line-height: 1.8em
+            font-weight: 400
+
+#phase-1-slide-picture
+  height:100vh
+
+#phase-1-info
+  background:white
+  height:100vh
+  color:white
+
+#phase-1-winners
+  background:white
+  
+  .bcg
+    .hsContainer
+      .hsContent
+        text-align:center 
+
+
+        .yellow
+          background-color: YELLOW
+          // min-height: 55vh
+          color: #fff
+          padding: 8vh
+    
+          h1 
+            text-transform: uppercase
+            font-size: 3em
+            letter-spacing: 5px
+
+        .white
+          color: TEXT
+          background-color: #fff
+
+          .block-content
+            //width: 50vw
+            min-width: 350px
+            padding-bottom: 50px
+            margin-left: auto
+            margin-right: auto
+            padding-top: 5vh
+
+            h3
+              text-align:center
+
+            .ui.accordion
+              margin:auto
+              width:70vw
+              .title
+                font-size: 1.5em
+              .title.active
+                background-color: YELLOW
+                color: #fff
+              .item
+                padding-top:5vh
+
+
+#phase-2-slide
+  .bcg
+    background-color: YELLOW
+    background-size: auto auto
+    opacity:1
+    text-align: center
+
+    .hsContainer
+      min-height:0vh
+
+      .hsContent
+        top: 0
+        margin-top: 0
+
+      table
+        margin:auto
+
+      .yellow
+        background-color: YELLOW
+        // min-height: 55vh
+        color: #fff
+        padding: 8vh
+
+        .logo
+          padding-bottom: 2vh
+          img
+            width: 180px
+
+        h1
+          margin: 0
+          text-transform: uppercase
+          font-size: 3em
+          letter-spacing: 5px
+
+      .white
+        color: TEXT
+        background-color: #fff
+
+        .content
+          width: 50vw
+          min-width: 350px
+          padding-bottom: 50px
+          margin-left: auto
+          margin-right: auto
+          padding-top: 5vh
+
+          p
+            font-size: 1.3em
+            line-height: 1.8em
+            font-weight: 400
+
+#phase-2-slide-picture
+  height:100vh
+
+#phase-2-info
+  background:white
+  height:100vh
+  color:white
+
+#phase-2-winners
+  background:white
+  
+  .bcg
+    .hsContainer
+      .hsContent
+        text-align:center
+
+        .yellow
+          background-color: YELLOW
+          // min-height: 55vh
+          color: #fff
+          padding: 8vh
+    
+          h1 
+            text-transform: uppercase
+            font-size: 3em
+            letter-spacing: 5px
+
+        .white
+          color: TEXT
+          background-color: #fff
+
+          .block-content
+            //width: 50vw
+            min-width: 350px
+            padding-bottom: 50px
+            margin-left: auto
+            margin-right: auto
+            padding-top: 5vh
+
+            h3
+              text-align:center
+
+            .ui.accordion
+              margin:auto
+              width:70vw
+              .title
+                font-size: 1.5em
+              .title.active
+                background-color: YELLOW
+                color: #fff
+              .item
+                padding-top:5vh
+
+/*contact slide*/
+
+#contact-slide
+
+  .bcg 
+    background-image:url("http://i.imgur.com/vjyOiCR.png")
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    min-height: 100%
+    text-align: center
+    height:100%
+
+    .hsContainer
+      padding: 100px 0px 10px 0px
+      height:auto
+      
+      table
+        min-height:100vh
+        margin:auto
+
+      i.icon
+        font-size:1.3em
+
+      .logo 
+        margin-right: 30px
+
+      h1 
+        color: #fff
+        text-transform: uppercase
+        letter-spacing: 5px
+        font-size: 1.6em
+        margin-top: 0
+
+      #accent
+        color: GRAY
+
+      .contact 
+        margin-top: 100px
+        bottom: 70px
+
+        p 
+          color: #fff
+          font-size: 1.3em
+          line-height: 1.8em
+          font-family: MAKE-HEADER-FONT
+
+        p.footer
+            margin-top:1em
+            color: #000
+            font-size: 0.8em
+            line-height: 1.8em
+            font-family: MAKE-BODY-FONT
+
+            a
+              color: GRAY
+
+            a:hover
+              opacity: .7
+              transition: all 300ms ease
+
+        i
+          color: GRAY
+
+        i:hover
+          opacity: .7
+          transition: all 300ms ease

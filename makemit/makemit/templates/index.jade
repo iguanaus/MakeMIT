@@ -1,0 +1,426 @@
+extends base.jade
+-load staticfiles
+| {% load pipeline %}
+
+block head
+  link(rel='stylesheet', href='{% static "stylesheets/index.css" %}')
+
+block body
+
+  nav#nav.ui.borderless.menu(data-0='opacity:0',
+    data-200='opacity:0', 
+    data-210-top='opacity: 1', 
+    data-anchor-target="#about-slide")
+    div.ui.centered.grid
+      a.centered.grid.item(href='#about-slide') 
+        div.link About
+      a.centered.grid.item(href='#schedule-slide') 
+        div.link Schedule
+      a.centered.grid.item(href='#sponsors-slide') 
+        div.link Sponsors
+      a.centered.grid.item(href='#faq-slide') 
+        div.link FAQ  
+      a.centered.grid.item(href='#contact-slide') 
+        div.link Contact
+   
+  div#skrollr-body
+    section#home-slide.homeSlide
+      div.bcg
+        img#tools(src="/static/images/tools.png")
+        div.hsContainer
+          div.hsContent
+            h1 Make
+             span#title-accent MIT
+            h2 We are a <span id="title-accent">hardware</span> hackathon.
+            div.details
+              h4 <i id = "title-accent" class="calendar outline icon"></i> TBD, 2016
+              a(href="https://www.google.com/maps/place/Stratton+Student+Center/@42.359099,-71.094536,17z/data=!3m1!4b1!4m2!3m1!1s0x89e370aa862b3beb:0x487c37ec53df273")
+                  | <i id = "title-accent" class="marker icon"></i> Lobdell Hall - MIT
+
+            div.ui.stackable.one.wide.grid
+              div.row
+                div.center.aligned.column
+
+                  //- div.row
+                  //-   a(href="register")
+                  //-     div#register.ui.button Register Now
+
+                  div.row
+                    div#mailsignup.ui.fluid.accordion.styled
+                      - var titlecls = 'title segment'
+                      - var contentcls = 'content'
+                      if form.email.errors or form.success
+                        - var titlecls = 'active '+titlecls
+                        - var contentcls = 'active '+contentcls
+                      div(class=titlecls) 
+                        h3 Sign up for our mailing list
+                      div(class=contentcls)
+                        form.ui.form.segment(action='/mailsignup/', method='POST') 
+                          p 
+                            | Enter your email to be updated with more information about MakeMIT 2016.
+                          {% csrf_token %}
+                          - var cls =   'ui'
+                          if form.email.errors
+                            - var cls = cls + ' error'
+                          - var cls = cls + ' field'
+                          div(class=cls)
+                          -if form.email.errors
+                            div.ui.red.message #{form.email.errors}
+                          - if form.success
+                            div.ui.green.message You've been successfully added!
+                          div(class=cls)
+                            input(class=cls, id="email", name='email', placeholder='Email', type='text') 
+                          button.ui.fluid.submit.button(type='submit') 
+                            h3 Sign Up
+              div.row
+                div.center.aligned.column
+                  div.row
+                    //- a(href="dayof")
+                    //-   div#register.ui.button Day Of Page
+                    //- a(href="codeofconduct")
+                    //-   div#register.ui.button Code of Conduct
+                    a(href="review2015")
+                      div#register.ui.button 2015 Review
+                      
+
+            
+            a#down-arrow(href='#about-slide')
+              i.chevron.down.icon
+    section#about-slide
+      div.bcg
+        div.hsContainer
+          div.hsContent
+            div.yellow
+              div.logo
+                img(src='{% static "images/logo-mini.png" %}')
+              div.title
+                h1 About MakeMIT
+            div.white
+              div.content
+                p 
+                  | A hardware hackathon promoting innovation that 
+                  | is geared towards those who are excited 
+                  | and passionate about designing and building. Over 
+                  | 200 students competed 
+                  | in an 15+ hour prototyping competition on February 28, 2015. 
+                  | The <b>top ten teams</b> were then 
+                  | be invited to come back for a <b>second weekend</b> in order to refine their design.
+
+    section#stats-slide
+      div.bcg
+        div.hsContainer
+          div.hsContent
+            div.ui.centered.twelve.wide.grid#stats
+              div.two.wide.column
+                h1 15+
+                div.label
+                  p Hours
+              div.column#plus
+                p +
+              div.two.wide.column
+                h1 200
+                div.label
+                  p People
+              div.column#plus
+                p +
+              div.two.wide.column
+                h1 50
+                div.label
+                  p Teams
+              div.column#plus
+                p +
+              div.two.wide.column
+                h1 $5000
+                div.label
+                  p In prizes
+
+    section#schedule-slide
+      div.bcg
+        div.hsContainer
+          div.hsContent
+            h1 Schedule 
+            p The schedule for our 2016 event is still under development!
+            //- div.ui.one.column.stackable.grid#schedule-container
+            //-   div.row
+            //-     div.center.aligned.column
+            //-       div.ui.inverted.list
+            //-         div.content
+            //-           div.header 
+            //-             h2 Saturday, February 28th
+            //-           div.list(style="text-align:left")#schedule
+            //-             div.item
+            //-               div.content
+            //-                 div.header
+            //-                   h3 7:45AM 
+            //-                 div.description - Registration Opens / Breakfast
+            //-             div.item
+            //-               div.content 
+            //-                 div.header 
+            //-                   h3 9:00AM 
+            //-                 div.description - Kickoff
+            //-             div.item
+            //-               div.content 
+            //-                 div.header
+            //-                   h3 9:30AM 
+            //-                 div.description - Hacking Starts
+            //-             div.item
+            //-               div.content
+            //-                 div.header
+            //-                   h3 12:30PM
+            //-                 div.description - Lunch
+            //-             div.item
+            //-               div.content
+            //-                 div.header
+            //-                   h3 6:30PM
+            //-                 div.description - Dinner
+            //-             div.item
+            //-               div.content  
+            //-                 div.header
+            //-                   h3 12:15AM 
+            //-                 div.description - Hacking Ends
+            //-             div.item
+            //-               div.content 
+            //-                 div.header
+            //-                   h3 12:30AM 
+            //-                 div.description - Expo Starts
+            //-             div.item
+            //-               div.content 
+            //-                 div.header
+            //-                   h3 1:15AM 
+            //-                 div.description - Top Teams Presentation
+            //-             div.item
+            //-               div.content 
+            //-                 div.header
+            //-                   h3 1:45AM 
+            //-                 div.description - Awards Ceremony
+            //-             div.item
+            //-               div.content 
+            //-                 div.header
+            //-                   h3 2:30AM
+            //-                 div.description - Event Ends
+            //-   div.row
+            //-     div.center.aligned.column
+            //-       div.ui.list
+            //-         div.content
+            //-           div.header 
+            //-             h2 Saturday, March 7th
+            //-           p 
+            //-             | The <b>top ten teams</b> from the first weekend will be invited back 
+            //-             | the next weekend to refine their design with more 
+            //-             | materials and machine shop access!
+
+    section#sponsors-slide
+      div.bcg
+        div.hsContainer
+          div.hsContent
+
+              h1 Sponsors (2015)
+
+              div#sponsors-grid.ui.one.column.grid
+                div.column
+                  div.row
+                    div#gold.ui.one.column.center.aligned.grid
+                        div.column
+                          a(href='http://www.kinoma.com/')
+                            img(src='{% static "images/sponsors/Kinoma-GOLD.png" %}', alt='Kinoma')
+                          a(href='http://www-eecs.mit.edu/')
+                            img(src='{% static "images/sponsors/MITEECS-GOLD.png" %}', alt='MIT EECS')
+                          a(href='http://www.mashery.com/')
+                            img(src='{% static "images/sponsors/intel-GOLD.png" %}', alt='Intel Mashery')
+                          a(href='http://www.nest.com/')
+                            img(src='{% static "images/sponsors/Nest-GOLD.png" %}', alt='Nest')
+                          a(href='http://www.facebook.com/')
+                            img(src='{% static "images/sponsors/Facebook-GOLD.png" %}', alt='Facebook')
+                          a(href='http://www.oculus.com/')
+                            img(src='{% static "images/sponsors/Oculus-GOLD.png" %}', alt='Intel Mashery')
+                          a(href='http://www.levantpower.com/')
+                            img(src='{% static "images/sponsors/levantlogo-GOLD.png" %}', alt='Levant Power')
+
+                  div.row
+                    div#silver.ui.one.column.center.aligned.grid
+                      div.row
+                        div.column
+                          a(href='http://www.atmel.com/')
+                            img(src='{% static "images/sponsors/atmel-SILVER.png" %}', alt='Atmel')
+                          a(href='https://www.markforged.com/')
+                            img(src='{% static "images/sponsors/markforged-SILVER.png" %}', alt='MarkForged')
+                          a(href='http://www.8020.net/')
+                            img(src='{% static "images/sponsors/8020-SILVER.png" %}', alt='80/20')
+                          a(href='http://ww.airinc.net/')
+                            img(src='{% static "images/sponsors/AIR-SILVER.png" %}', alt='AIR')
+                          a(href='http://www.stratasys.com/')
+                            img(src='{% static "images/sponsors/stratasys-SILVER.png" %}', alt='Stratasys')
+                          a(href='http://www.leaflabs.com/')
+                            img(src='{% static "images/sponsors/LeafLabText_SILVER.png" %}', alt='LeafLabs')
+                          a(href='http://lemelson.mit.edu/')
+                            img(src='{% static "images/sponsors/lemelson-SILVER.png" %}', alt='Lemelson')
+                          a(href='http://www.makerbot.com/')
+                            img(src='{% static "images/sponsors/MakerBot-Silver.png" %}', alt='MakerBot')
+                          a(href='http://www.microsoft.com')
+                            img(src='{% static "images/sponsors/Microsoft-Silver.png" %}', alt='Microsoft')
+                          
+                  div.row
+                    div#bronze.ui.one.column.center.aligned.grid
+                      div.row
+                        div.column
+                          a(href='http://www.rethinkrobotics.com/')
+                            img(src='{% static "images/sponsors/RethinkRoboticsLogo_BRONZE.png" %}', alt='Rethink Robotics')
+                          a(href='http://www.alphalabgear.org/')
+                            img(src='{% static "images/sponsors/alphalabGear-BRONZE.png" %}', alt='AlphaLab Gear')
+                          a(href='http://www.tempoautomation.com/')
+                            img(src='{% static "images/sponsors/tempoautomationlogo-BRONZE.png" %}', alt='Tempo Automation')
+                          a(href='http://www.dremel.com/')
+                            img(src='{% static "images/sponsors/dremel-BRONZE.png" %}', alt='Dremel')
+                          a(href='http://www.apple.com/')
+                            img(src='{% static "images/sponsors/Apple-Bronze.png" %}', alt='Apple')
+                          a(href='http://tessel.io/')
+                            img(src='{% static "images/sponsors/TechnicalMachine-Bronze.png" %}', alt='Technical Machine')
+                  div.row
+                    div#custom.ui.one.column.center.aligned.grid
+                      div.row
+                        div.column
+                          a(href='http://www.adafruit.com/')
+                            img(src='{% static "images/sponsors/adafruit_CUSTOM.png" %}', alt='Adafruit')
+                          a(href='http://www.grabcad.com/')
+                            img(src='{% static "images/sponsors/gc-logo-transparent_CUSTOM.png" %}', alt='GrabCAD')
+                          a(href='http://www.monograph.io/')
+                            img(src='{% static "images/sponsors/monograph_withWords-CUSTOM.png" %}', alt='Monograph')
+                          a(href='http://www.onshape.com/')
+                            img(src='{% static "images/sponsors/onshape-CUSTOM.png" %}', alt='Onshape')
+                          a(href='https://www.thalmic.com/en/myo/')
+                            img(src='{% static "images/sponsors/thalmic_labs_logo_CUSTOM.png" %}', alt='Thalmic Labs')
+                          a(href='http://dgftech.com/')
+                            img(src='{% static "images/sponsors/DGF-CUSTOM.png" %}', alt='DGF Tech')
+                          a(href='http://www.raspberrypi.org/')
+                            img(src='{% static "images/sponsors/RaspberryPi_CUSTOM.png" %}', alt='Raspberry Pi')
+
+    section#faq-slide
+      div.bcg
+        div.hsContainer
+          div.hsContent
+            h1 Frequently Asked Questions
+            div.ui.three.column.stackable.page.grid
+                div.row
+                  div.column 
+                    h2 How does it work?
+                    p 
+                      | You'll work in teams of 3-5 hackers to make a product. We'll provide you with a bunch of protoyping resources 
+                      | and lots of food to keep you fueled. The <b>top ten teams</b> from the first weekend will be invited back for a <b>second 
+                      | round</b>, this time with machine shop access.
+                  div.column
+                    h2 Who can attend?
+                    p 
+                      | All undergraduate students are welcome. Unfortunately, we are not accepting graduate students for this year's event.
+                  div.column
+                    h2 How much does it cost?
+                    p 
+                      | This event is completely free! We'll provide food and drinks, and of course a plethora of materials and tools to 
+                      | hack with. Everything's on us!
+                div.row
+                  div.column
+                    h2 Are you providing travel reimbursments? 
+                    p 
+                      | Unfortunately, we are not able to provide travel reimbursements this year! However, if you need accomodations, 
+                      | just shoot us an <a href="mailto:team@makemit.org">email</a> and we can help you find a place to stay.                     
+                  div.column
+                    h2 How do I register?
+                    p 
+                      | Sorry! MakeMIT 2015 has already passed.
+                      | Sign up for our mailing list to be kept in the loop for next year!
+                  div.column
+                    h2 How big should teams be? Can I sign up alone?
+                    p 
+                      | Teams should be groups of 3-5 people. If you have a team, have all your members register and specifiy each 
+                      | other in your application. <b>If you don't have a team, don't worry!</b> We will help you discuss projects and
+                      | organize a team.
+
+                      //- | Use our <a href="http://makemit2015.sparkboard.com">
+                      //- | SparkBoard</a> to in order to create, join, or discuss projects.  By the time the hackathon 
+                      //- | rolls around, everyone will expected to have a team preformed or organized on <a href="http://makemit2015.sparkboard.com">
+                      //- | Sparkboard</a>.
+                div.row
+                  div.column
+                    h2 What hardware will be available?
+                    p
+                      | There'll be a fleet of 3D printers, laser cutters, Arduinos, Raspberry Pi's, and much more.
+                      | Check out the 2015 materials list <a href="materials">here</a>! If there's something you want to see but 
+                      | isn't there, drop us a <a href="mailto:team@makemit.org">line</a>!
+                      //- | There'll be a fleet of 3D printers from MakerBot and Formlabs, Microsoft Kinects, Arduinos, arLCDs, and much more.
+                      //- | Check out the list <a href="http://makemit.org/hackers#tools">here</a>! If there's something you want to see but 
+                      //- | isn't there, drop us a line!
+                  div.column
+                    h2 What should I bring?
+                    p
+                      | You'll need your student ID to check-in and we recommend you bring a laptop for hacking! You can also feel free 
+                      | to bring in any of the materials that we <a href="materials">list</a>. Otherwise, if you'd like to bring something 
+                      | off-the-shelf that we are not providing, shoot us an <a href="mailto:team@makemit.org">email</a>. You will not 
+                      | be allowed to bring anything that has not been pre-approved.
+
+                  div.column
+                    h2 What should I make?
+                    p  
+                     | Whatever your heart desires. You can come with an idea in mind, but we ask that you do not start building or coding 
+                     | anything before the event starts.  We encourage all kinds of ideas, whether it's a proof of concept, looks-like-works-like 
+                     | model, critical module, simulation, CAD renderings, or prototype.  Whatever you choose to make, do your best to sell your 
+                     | ideas to the judges.                
+                div.row
+                  
+                  div.column
+                    h2 I'm a beginner. Can I still apply?
+                    p  
+                      | Don't worry! We encourage beginners to come and learn! We've got tons of mentors and we really focus on catering to 
+                      | newcomers' needs by providing tutorials and online resources. In other words, we are super beginner friendly!
+                  div.column
+                    h2 I have a question not listed. Who do I ask?
+                    p 
+                      | Get in touch with us through <a href="https://www.facebook.com/makemit">facebook</a>, 
+                      | <a href="https://twitter.com/TeamMakeMIT">twitter</a>, or <a href="mailto:team@makemit.org">email</a>!
+
+    section#contact-slide
+      div.bcg
+        div.hsContainer
+          div.hsContent
+            div.logo
+                img(src='{% static "images/logo-mini.png" %}')
+            h1 Make<span id="accent">MIT 2016</span>
+            div.contact
+              p Questions? Comments? Concerns?
+                br
+                | We'd love to hear from you.
+              a(href="mailto:team@makemit.org") 
+                i.mail.icon
+
+              a.social(href="https://www.facebook.com/makemit")
+                i.ui.icon.facebook
+              a.social(href="https://twitter.com/TeamMakeMIT")
+                i.ui.icon.twitter
+
+   //- Initiate skrollr
+  script.
+    (function( $ ) {
+      
+      var s = skrollr.init({render: function(data) {
+
+          },
+          forceHeight:false,
+      });
+      skrollr.menu.init(s,{animate:true});
+
+    })(jQuery);
+
+    $('#register').accordion();
+
+    $('#mailsignup').accordion({
+      onOpen : function() {
+        position = $('.ui.accordion').offset().top + $('.ui.accordion').height() - $(window).height();
+
+        if ($(window).scrollTop() < position) {
+          $('html,body').animate({
+            scrollTop: $('#about-slide').offset().top - $(window).height()
+          }, 500);
+        }
+      }
+    });
+    //$('.ui.accordion').accordion('onOpen', function(){console.log('hi')});
+
+    //var scrollBottom = $(window).scrollTop() + $(window).height();

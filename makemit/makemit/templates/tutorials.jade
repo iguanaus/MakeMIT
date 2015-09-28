@@ -1,0 +1,74 @@
+extends base.jade
+-load staticfiles
+| {% load pipeline %}
+
+block head
+  link(rel='stylesheet', href='{% static "stylesheets/materials.css" %}')
+
+block body
+  div#skrollr-body
+    section#materials-slide
+      div.bcg
+        div.hsContainer
+          div.hsContent 
+            div.header
+              h5 <a href="/">⟵ Back to MakeMIT site</a>
+            h1 Tutorials
+            p 
+              | We've compiled a list of tutorials to help you get started with new parts
+              | that you may not have used before. They may even help you brainstorm an 
+              | idea for a project! If you have any questions, feel free to hop into our
+              | <a href="http://q.makemit.org">mentor queue</a> to ask one of our mentors
+              | for help. 
+
+            table.ui.three.column.table
+              thead
+                tr
+                  th Part
+                  th Links
+                  th Tutorials
+              tbody
+                {% for material in tutorials %}
+                tr
+                  td
+                    div.content
+                      h4.header #{material.part}
+                      
+                  td
+                    div.ui.large.list
+                      {% if material.info_link %}
+                      a#link.item(href=material['info_link']) More Information
+                      {% endif %}
+                      {% if material.spec_sheet %}
+                      a#link.item(href=material['spec_sheet']) Spec Sheet
+                      {% endif %}
+                  td
+                    div.ui.large.list
+                      {% for tutorial in material.tutorials %}
+                      {% if tutorial.link %}
+                      {% if tutorial.title %}
+                      a#link.item(href=tutorial['link']) #{tutorial.title}
+                      {% else %}
+                      a#link.item(href=tutorial['link']) Tutorial
+                      {% endif %}
+                      {% endif %}
+                      {% endfor %}                         
+                {% endfor %} 
+
+            
+
+
+   //- Initiate skrollr
+  script.
+    (function( $ ) {
+      
+      var s = skrollr.init({render: function(data) {
+
+          },
+          forceHeight:false,
+      });
+      skrollr.menu.init(s,{animate:true});
+
+    })(jQuery);
+
+    $('.ui.accordion').accordion({exclusive:false});

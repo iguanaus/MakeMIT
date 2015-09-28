@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie lt-ie9 lt-ie8 lt-ie7 ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+
+<head>
+
+<meta charset="utf-8">
+<!-- Since v1.2 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- End Since v1.2 -->
+<meta name="description" content="">
+<meta name="author" content="">
+<script type='text/javascript'>
+
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem( 'firstLoad' ) )
+    {
+      localStorage[ 'firstLoad' ] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem( 'firstLoad' );
+  }
+})();
+
+</script>
+
+<title>MAKEMIT</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo.png">
+
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.min.css" />
+
+<!-- Stylesheets -->
+<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+<link rel="stylesheet" id="css-dark" type="text/css" media="screen" href="" />
+<link rel="stylesheet" type="text/css" media="screen" href="assets/css/entypo.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="assets/css/magnific-popup.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="assets/css/flexslider.css" />
+
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+        <!-- Begin Header -->
+        <div id="main-nav" class="nav-container">
+            <nav class="main-nav clearfix">
+                <a class="brand external" id ='apres' href="index.html"><img class="brand" src="images/logo.png"></img> MAKEMIT</a>
+                <ul class="nav pull-right">
+                    <li><a href="#schedule">schedule</a></li>
+                    <li><a href="#tools">featured</a></li>
+                    <li><a href="#tools">tools & materials</a></li>
+                    <li><a href="#prizes">prizes</a></li>
+                    
+
+
+                </ul>
+                <select onChange="scrollTo(this.value)" size"1" id="mobile-navigation">
+                    <option selected value="">Navigation</option>
+                    <option value="#schedule">schedule</option>
+                    <option value="#tools">tools</option>
+                    <option value="#featured">featured</option>
+                    <option value="#sponsors">sponsors</option>
+                    <option value="#prizes">prizes</option>
+                    <option value="#contact">contact</option>
+
+
+                </select>
+            </nav>
+        </div>
+        <!-- // End Header -->
+
+        <!-- Begin Home Section -->
+        <section id="schedule" class="home-type parallax-type bottom-arrow">
+            
+            <!-- Parallax - Place your parallax image as a background-image -->
+            <div class="parallax two" style="background-image:url(images/circuitbg.jpg); background-size: cover; background-position: 50% -21px; top: -100px;"></div>
+            <!-- End Parallax -->
+            
+            <div class="overlay">
+                <div class="container">
+                <div class="dark-bg">
+                <div class="row"><br><br><br></div>
+                <div class="row">
+                        <div class="span8 offset1 slogan text-right" id='perks'>
+<h1 class='smallmargin lowercase text-center'>Schedule</h1></p>
+
+                            <table class="scheduletable text-left">
+                                <tr>
+                                    <td colspan="2" class="text-center blue"><strong>February 15, 2014</strong></td>
+                                <tr>
+                                    <td><strong>8:00am</strong></td>
+                                    <td>Registration Opens</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>9:00am</strong></td>
+                                    <td>Kickoff</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>9:30am</strong></td>
+                                    <td>Hacking Starts</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>12:00pm</strong></td>
+                                    <td>Lunch</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>afternoon</strong></td>
+                                    <td>Workshops & Hacking</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>6:30pm</strong></td>
+                                    <td>Dinner</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>11:00pm</strong></td>
+                                    <td>Presentation Expo</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>11:45pm</strong></td>
+                                    <td>Closing Ceremony</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>12:00am</strong></td>
+                                    <td>Event ends</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="text-center blue"><br><strong>February 22, 2014</strong></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="text-center">The <font class="blue">top ten hacks</font> from Phase I will be invited back the next weekend for another round of hacking with more materials and machine shop access!</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <div class="span11 offset2 minislogan text-left">
+
+                            <h1 class='blue lowercase smallmargin text-center'>Announcements</h1>
+                            <p class= "white announcements"><br>
+                                We're all booked for this year, so if you weren't able to make it, we hope to see you next year!
+                            </p>
+                            <p class= "white announcements">If you confirmed your registration, you should have received a final email from us about logistical details. <a href="mailto:team@makemit.org">Email</a> us if you haven't. We're excited to see you tomorrow at <strong>8am for registration</strong> and our <strong>kickoff at 9am</strong>! Meanwhile, check out the <a href="#tools">tools and materials list</a> below to start tinkering in your mind.</p>
+                            <div class="text-center"><a href="http://makemit.sparkboard.com" class="btn border-btn">Sparkboard</a> <a href="index.html" class="btn border-btn">Home</a></div>
+                        </div>
+                </div>
+                <div class="row"><br><br></div>
+            </div>
+                </div>
+            </div>
+            <!-- End Overlay -->
+                        
+        </section>
+        <!-- // End Home Section -->
+
+
+
+
+        <!-- // End About Section -->
+
+        <!-- Begin About Section -->
+        <section id="tools" class="page-type dark-bg2 bottom-arrow2">
+            <div class="container">
+                <div class="row">
+                    <div class="span24 text-center">
+                        <h1 class="lowercase">tools and materials</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span24">
+                        <div><p class='minislogan text-center'>See the list below for what we're providing you to hack with. We suggest all hackers bring a laptop. Other than that, leave it up to us! If you'd like to see something not on the list below, shoot us an email at <a href="mailto:team@makemit.org">team@makemit.org</a>. We might be able to provide it, otherwise you're free to bring something off-the-shelf as long as it is <strong>pre-approved</strong>. Please note that <strong>any other materials will be confiscated at registration.</strong></p></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- // End About Section -->
+
+
+        <!-- Begin About Section -->
+        <section id="featured" class="page-type bottom-arrow" style="background-image:url(images/triangles.png); background-size: cover; background-position: 50% -21px">
+            <div class="container">
+                <div class="row">
+                    <div class="span24 text-center">
+                        <h1 class="lowercase">featured materials</h1>
+                    </div>
+                    <div class="span10 offset2 text-left">
+                        <a href="http://formlabs.com/products/our-printer"><img style="height: 150px; float:left;" src="sponsors/formprint.png"></img></a><h4>Formlabs 3D Printers</h4>
+                        <p>Want to build something but didn't think it was possible? Formlabs is bringing a fleet of their newest Form 1 STL printers for you to print with. Come use one of our nifty 3D printers to create a part of crazy geometry or of immense complexity!</p>
+                    </div>
+
+                    <div class="span11 offset1 text-left">
+                       <a href="http://www.microsoft.com/en-us/kinectforwindows/develop/"><img style="height: 100px; float:left; margin: 0px 10px 10px 0px;" src="images/makerbot.png"></a>
+                        <h4 class="text-left">MakerBot Replicator 2</h4>
+                        <p>MakerBot 3D printers are making an appearance at MakeMIT. Used everywhere by designers and engineers, the Makerbot Replicator 2 printers let you build things better and faster. These Desktop FDM 3D printers allow you to make prototypes, products, parts, inventions, tools, toys, and more.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span10 offset2 text-left">
+                        
+                       <a href="http://www.microsoft.com/en-us/kinectforwindows/develop/"><img style="height: 100px; float:left; margin: 0px 10px 10px 0px;" src="images/kinect.png"></a>
+                        <h4 class="text-left">Microsoft Kinects</h4>
+                        <p>Thanks to the Microsoft Kinect teams, both V1 AND the UNRELEASED V2 Kinects are available to fulfill your vision needs. If you decide to use the V2, we'll lend you a Microsoft Surface with the unreleased SDK. Not familiar with the Kinect system? Not a problem! There will be a team of Kinect engineers on-site to help guide your project along.</p>
+                    </div>
+                    <div class="span11 offset1 text-left">
+                       <a href="http://store.earthlcd.com/arLCD"><img style="height: 100px; float:left; margin: 0px 10px 10px 0px;" src="images/LCD.jpg"></a>
+                        <h4 class="text-left">arLCDs</h4>
+                        <p>EarthLCD's newest product, arLCD, allows you to add a touchscreen interface to your Arduino project in minutes, rather than hours or days. Make a Custom LCD project with EarthLCD. It has never been easier to create a custom project. We're expecting to see arLCD at the heart of many cool project at this year's MakeMIT!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span10 offset2 text-left">
+                        
+                       <a href="http://www.grabcad.com"><img style="height: 100px; float:left; margin: 0px 10px 10px 0px;" src="http://grabcad.com/assets/illustrations/illustration-frontpage-index-main-f8775d6ddf792116bc72bf7af6321424.jpg"></a>
+                        <h4 class="text-left">GrabCAD</h4>
+                        <p>GrabCAD makes it easy for your team to collaborate on all your CAD files. GrabCAD has offered to give anyone at MakeMIT who uses it a free year long subscription! It can sync up to Solidworks, Autodesk, and other modeling applications witih your Toolbox. Stop by the GrabCAD booth at MakeMIT to find out more and set it up on your computer!</p>
+                    </div>
+                    <div class="span11 offset1 text-left">
+                       <a href="http://www.riserobotics.com"><img style="height: 100px; float:left; margin: 0px 10px 10px 0px;" src="images/rise.jpg"></a>
+                        <h4 class="text-left">Cyclone Linear Actuator</h4>
+                        <p>Rise Robotics enables low-cost mobile robotic arms that lift with human-speed and human strength. Cyclones have power at prices similar to pneumatic cylinders. Unlike existing servos or cylinders, Cyclones are lightweight, affordable, and powerful. They are battery powered and digitally controlled.</p>
+                    </div>
+                    <!-- <div class="span6 offset2 text-center">
+                        <img src="images/ezlcd.jpg">
+                        <br>ezLCDs<br>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <!-- // End About Section -->
+
+        <!-- Begin Parallax Aside -->
+        <aside id="tools" class="seperator-type parallax-type">
+            <!-- Parallax -->
+            <div class="parallax one" style="background-image:url(images/mc4.jpg); background-size: cover; background-position: 50% -21px"></div>
+            <!-- End Parallax -->
+            
+            <div class="container">
+                <div class="dark-bg">
+                <div class="row"><br></div>
+                <div class="row">
+                    <div class="span24 text-center">
+                        <h1 id="normalcase">toolbox</h1>
+                    </div>
+                        <div class="span5 offset2 text-left">
+                            <p class = "tools">
+                                <strong>Mechanical Structure Components:</strong><br>
+                                <a href="http://us.misumi-ec.com/vona2/mech/M1500000000/M1501000000/M1501010000/">80/20 - Like Extrusions</a><br>
+                                <a href="http://www.legoeducation.us/eng/product/lego_mindstorms_education_nxt_resource_set/2214">Lego Kits</a><br>
+                                <a href="http://www.vexrobotics.com/vex/products/accessories/structure?ref=home">VEX Kit</a><br>
+                                #8-32 (3/8", 1/2", 3/4", 1 1/4")<br>
+
+
+                                <br>
+                                <strong>Microcontrollers and Shields:</strong><br>
+                                <a href="http://www.adafruit.com/products/1411">Arduino 16-Channel 12-bit PWM/Servo Shield</a><br>
+                                <a href="http://www.adafruit.com/products/746">Arduino GPS Shield</a><br>
+                                <a href="http://arduino.cc/en/Main/ArduinoMotorShieldR3">Arduino Motor Shield</a><br>
+                                <a href="https://www.sparkfun.com/products/11021">Arduino Uno</a><br>
+                                <a href="https://www.sparkfun.com/products/9947">Arduino USB Host Shield</a><br>
+                                <a href="http://www.adafruit.com/blog/2013/08/22/new-product-adafruit-cc3000-wifi-shield-with-onboard-ceramic-antenna/">Arduino wifi shield</a><br>
+                                <a href="https://www.sparkfun.com/products/9088">Mini Photocell</a><br>
+                                <a href="https://www.sparkfun.com/products/9457">Motor driver, 1A, dual channel</a><br>
+                                <a href="https://www.sparkfun.com/products/11546">Raspberry Pi Model B</a><br>
+                                <a href="http://www.adafruit.com/products/789">RFID Controller Shield</a><br>
+                                <a href="http://www.adafruit.com/products/94">Wave Shield</a><br>
+                            </p>
+                        </div>
+                        <div class="span5 text-left">
+                            <p class = "tools">
+
+                                <strong>Raw Materials:</strong><br>
+                                ABS Sheets<br>
+                                Acrylic/Plexiglass (sheets of varying thickness)<br>
+                                Aluminum Shaft Extrusions<br>
+                                Balsa Wood<br>
+                                Cardboard<br>
+                                Epoxy<br>
+                                Foam Core<br>
+                                Super Glue<br>
+                                Wood Glue<br>
+                                <br>
+                                <strong>Electronic Components</strong><br>
+                                Batteries<br>
+                                Breadboards<br>
+                                LED Light Strips<br>
+                                LEDs<br>
+                                Protoboards<br>
+                                Resistors, Capacitors, Transistors, etc.<br>
+                                Solder Wick<br>
+                                Wire<br>
+                                Wire Strippers<br>
+
+                            </p>
+                        </div>
+                        <div class="span5 text-left">
+                            <p class = "tools">
+                                <strong>Input/Output:</strong><br>
+                                <a href="https://www.sparkfun.com/products/11977">3-axis gyro</a><br>
+                                <a href="http://earthmake.com/product/arlcd/">arLCD</a><br>
+                                <a href="://www.adafruit.com/products/987">Audio Amplifier</a><br>
+                                <a href="http://www.adafruit.com/products/818">Button/Limit switche</a><br>
+                                <a href="https://www.sparkfun.com/products/8606">flex sensor</a><br>
+                                <a href="https://www.sparkfun.com/products/8958">Infrared Distance Sensors</a><br>
+                                <a href="http://www.adafruit.com/products/164">Infrared Distance Sensors</a><br>
+                                <a href="https://www.sparkfun.com/products/241">Infrared transmitter/receivers</a><br>
+                                <a href="http://www.adafruit.com/products/439">Light sensors</a><br>
+                                <a href="http://www.adafruit.com/products/1063">Microphone Amplifier</a><br>
+                                <a href="http://www.adafruit.com/products/160">Piezo buzzer</a><br>
+                                <a href="http://www.adafruit.com/products/189">PIR Motion Sensor</a><br>
+                                <a href="https://www.sparkfun.com/products/8630">PIR sensors</a><br>
+                                <a href="https://www.sparkfun.com/products/8712">pressure sensors</a><br>
+                                <a href="https://www.sparkfun.com/products/11868">Raspberry Pi Camera</a><br>
+                                <a href="http://www.adafruit.com/products/1367">Raspberry Pi Camera</a><br>
+                                <a href="http://www.adafruit.com/products/365">RFID tags</a><br>
+                                <a href="http://www.adafruit.com/products/1314">Speakers</a><br>
+                                <a href="https://www.sparkfun.com/products/10988">Temperature sensor</a><br>
+                                <a href="http://www.adafruit.com/products/173">Tilt Switches</a><br>
+                                <a href="https://www.sparkfun.com/products/9375">Touch/Force Sensors</a><br>
+                                <a href="http://www.adafruit.com/products/1231">Triple axis accelerometer</a><br>
+                                <a href="https://www.sparkfun.com/products/639">Ultrasonic Distance Sensors</a><br>
+                                <a href="https://www.sparkfun.com/products/9434">USB Bluetooth Module</a><br>
+
+
+                            </p>
+                        </div>
+                        <div class="span5 text-left">
+                            <p class = "tools">
+                                <strong>Motion:</strong><br>
+                                Actuators<br>
+                                DC Motors<br>
+                                Servos<br>
+                                Stepper Motors<br>
+                                Stepper Drivers<br>
+                                <br>
+                                <strong>Available Tools:</strong><br>
+                                3D printer<br>
+                                Dremels<br>
+                                Drills<br>
+                                Hacksaw<br>
+                                Heat gun<br>
+                                Lasercutter<br>
+                                Multimeter<br>
+                                Oscilloscope<br>
+                                Power Supply<br>
+                                Signal Generator<br>
+                                Soldering Iron<br>
+
+                                <font style="font-size: 15px; line-height:10px;"><font class="lightblue">Note:</font> Available tools will be provided in limited quantity and are to be used in pre-defined workspaces.</font>
+
+                            </p>
+                        </div>
+                </div>
+
+            </div>
+            </div>
+        </aside>
+        <!-- // End Parallax Aside -->
+        <!-- Begin Seperator Aside -->
+        <aside id="prizes" class="seperator-type parallax-type" style="background-image:url(images/triangles.png); background-size: cover; background-position: 50% -21px">
+            <!-- Parallax -->
+            <div class="parallax one"></div>
+            <!-- End Parallax -->
+          <div class="container">
+                <!--<div class="dark-bg">-->
+                <div class="row">
+                    <div class="span24 text-center">
+                        <h1 class="lowercase" style=" padding-top: 0px; margin-top:0px;">general prizes</h1>
+                    </div>
+                </div>
+              <div class="row">
+                    <div class="span7 offset1 minislogan" style="color:#2e2f2f">
+                            <p><strong>Top hacks:</strong> Present your hacks to the crowd and our panel of judges to win our 1st, 2nd, or 3rd place prizes and a chance to return.</p>
+                        </div>
+                    <div class="span7 offset1 minislogan" style="color:#2e2f2f">
+                            <p><strong>Top ten:</strong> The top ten teams will be invited back for a second weekend of hacking on <strong>February 22, 2014</strong> from 9am-7pm.</p>
+                            
+
+                    </div>
+                    <div class="span7 offset1 minislogan" style="color:#2e2f2f">
+                        <p class="text-right minislogan" style="color:#2e2f2f; font-size: 40px; line-height: 50px;">
+                            <strong style="font-family: kozukaR;">first:</strong> $2,000<br>
+                            <strong  style="font-family: kozukaR;">second:</strong> $1,000<br>
+                            <strong  style="font-family: kozukaR;">third:</strong> $500<br>
+                        </p>
+
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class="span24 text-center">
+                        <h1 class="lowercase" style=" padding-top: 0px; margin-top:0px;">sponsored prizes</h1>
+                    </div>
+                </div>
+                <div class ="row">
+                    <div class="span6 offset2 minislogan text-center"style="color: #ababab;">
+                        <div class="prizeimg"><a href="http://www.microsoft.com/en-us/kinectforwindows/develop/"><img src="sponsors/kinectprize.png"></a></div>
+                        <p>Admission into the Kinect for Windows V2 <a href="http://www.microsoft.com/en-us/kinectforwindowsdev/newdevkit.aspx">Developer Preview Program</a></p>
+                    </div>
+                    <div class="span6 offset2 minislogan text-center"style="color: #ababab;">
+                        <div class="prizeimg"><a href="https://www.dragoninnovation.com/projects/22-tessel"><img src="images/tesselA.png"></a></div>
+                        <p><a href="https://www.dragoninnovation.com/projects/22-tessel">Tessel Board + Class A Module:</a> a microcontroller programmable in JavaScript</p>
+                    </div>
+                    <div class="span6 offset2 minislogan text-center"style="color: #ababab;">
+                        <div class="prizeimg"><a href="https://www.dragoninnovation.com/projects/22-tessel"><img src="sponsors/octopart.png"></a></div>
+                        <p>$250 certificate for components on Octopart</p>
+                    </div>
+                </div>
+
+                <div class ="row">
+
+                    <div class="span6 offset2 minislogan text-center"style="color: #ababab;">
+                        <div class="prizeimg"><a href="http://www.microsoft.com/en-us/kinectforwindows/develop/"><img src="sponsors/bfec.png"></a></div>
+                        <p>$300 voucher for time on DGF Technologies' Stratasys Fortus 3D Printers and Laser Cutters</p>
+                    </div>
+
+                </div>
+            <!--</div>-->
+        </div>
+            </div>
+        </aside>
+        <!-- // End Seperator Aside -->
+
+
+
+        <!-- Begin Footer -->
+        <footer class="footer-type" style = "top:-50px;">
+            <div class="container">
+                <div class="row">
+                    <div class="span24 text-center">
+                            <p class="copyright">&copy; 2014 <a href="http://techx.mit.edu">MIT TechX</a>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- // End Footer -->
+        
+        
+        <!-- jQuery and Bootstrap -->
+        <script type="text/javascript" src="assets/js/jquery.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        
+        <!-- jQuery Plugins -->
+        <script type="text/javascript" src="assets/js/plugins/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.nav.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.parallax.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.hoverdir.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.isotope.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.magnific-popup.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.flexslider.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.tiledItems.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.tweet.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="assets/js/contact-form.js"></script>
+        <script type="text/javascript" src="assets/js/gmap3.min.js"></script>
+        
+        <!-- jQuery Custom -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+    
+        
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie lt-ie9 lt-ie8 lt-ie7 ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+
+<head>
+
+<meta charset="utf-8">
+<!-- Since v1.2 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- End Since v1.2 -->
+<meta name="description" content="">
+<meta name="author" content="">
+<script type='text/javascript'>
+
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem( 'firstLoad' ) )
+    {
+      localStorage[ 'firstLoad' ] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem( 'firstLoad' );
+  }
+})();
+</script>
+
+
+<title>MAKEMIT</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo.png">
+
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.min.css" />
+
+<!-- Stylesheets -->
+<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+<link rel="stylesheet" id="css-dark" type="text/css" media="screen" href="" />
+<link rel="stylesheet" type="text/css" media="screen" href="assets/css/entypo.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="assets/css/magnific-popup.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="assets/css/flexslider.css" />
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '{your-app-id}',
+          status     : true,
+          xfbml      : true
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+        <!-- Begin Header -->
+        <div id="main-nav" class="nav-container">
+            <nav class="main-nav clearfix">
+                <a class="brand" id ='apres' href="#"><img class="brand" src="images/logo.png"></img> MAKEMIT</a>
+                <ul id="nav" class="nav pull-right">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#sponsors">SPONSORS</li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                    
+                </ul>
+
+                <select onChange="scrollTo(this.value)" size"1" id="mobile-navigation">
+                    <option selected value="">Navigation</option>
+                    <option value="#about">aboutus</option>
+                    <option value="#sponsors">sponsors</option>
+                    <option value="#faq">faq</option>
+                    <option value="#home">home</option>
+                    <option value="#contact">contact</option>
+
+
+
+                </select>
+                  </nav>
+
+        </div>
+
+         
+        <!-- // End Header -->
+
+    	<!-- Begin Home Section -->
+        <section id="home" class="home-type parallax-type bottom-arrow" >
+        	
+            <!-- Parallax - Place your parallax image as a background-image -->
+            <div class="parallax two" style="background-image:url(images/mc5.jpg); background-size: 150% auto; background-position: 50% -21px; top: -100px;"></div>
+            <!-- End Parallax -->
+            
+            <div class="overlay">
+                <div class="container">
+                    <div class = "dark-bg span right">
+                    <div class="row" style="padding: 30px 0px 10px 0px;">
+                    <div class="span12 pull-right text-center">
+                        <div class="">
+                        <div class="">
+                            <p class="slogan white small lowercase smallmargin"><a href='http://techx.mit.edu'><img class = 'techxlogo nohover' src='images/logo_white.png'></a> presents...</p>
+                            <p><h1 class='smallmargin' style="text-transform:none;">MakeMIT</h1><h2 class='smallmargin'>A HARDWARE HACKATHON</h2></p>
+                           <!--  <h2 class = 'smallmargin' style=" line-height:20px;"><font class="slogan white small normalcase">February 15 & 22, 2014</font></font></h2>
+                            <br> -->
+                        <!-- <a href="hackers.html" class="btn border-btn">For Hackers</a>
+                        <a href="http://2.bp.blogspot.com/-f0crO5k9wwA/UP828DLsm4I/AAAAAAAAADQ/clc6mk7ppfI/s1600/pumped-up-meme-generator-i-m-so-pumped-up-bc0941.jpeg" class="btn border-btn">Get Pumped!</a> -->
+
+                        <!--<a href="dayof.html" class="btn border-btn">Day Of Information</a>-->
+                        
+                        <p class="smallmargin slogan small white normalcase" style="margin:10px; font-family: 'kozukaEL'">
+                        Check back soon to see this year's hacks!<br><strong>Phase II Winners:</strong><br>
+                        <strong>First:</strong> Lexo Glove<br>
+                        <strong>Second:</strong> 1GHz Active Differential<br>Oscilloscope Probe<br>
+                        <strong>Third:</strong> Droideka<br><br>
+                        <strong>Phase I Winners:</strong><br>
+                        <strong>First:</strong> Robot Guitar<br>
+                        <strong>Second:</strong> GoPro DataPac<br>
+                        <strong>Third:</strong> Lexo Glove<br>
+                        </p>
+                        </div>
+                        </div>
+					</div>
+                    </div>
+                    </div>
+				</div>
+			</div>
+            <!-- End Overlay -->
+                    	
+        </section>
+        <!-- // End Home Section -->
+
+
+        <!-- // End About Section -->
+
+        <!-- Begin Parallax Aside -->
+        <aside id="about" class="seperator-type parallax-type">
+        	<!-- Parallax -->
+        	<div class="parallax one" style="background-image:url(images/mc7.jpg); height: 100%; background-size: 150% auto; margin-top: -100px;"></div>
+            <!-- End Parallax -->
+            
+        	<div class="container">
+                <div class="dark-bg">
+                <div class="row"><br><br><br></div>
+                <div class="row">
+                        <div class="span8 offset1 slogan text-right" id='perks'>
+                            <p><strong>16</strong> hours<br>
+                            <strong>200</strong> people<br>
+                            <strong>50</strong> teams<br>
+                            <strong>$4000+</strong> in prizes<br></p>
+                        </div>
+                        <div class="span11 offset2 minislogan">
+                            <p><br>A <strong>hardware hackathon</strong> promoting innovation that is geared towards those who are excited and passionate about <strong>designing and building</strong>. Teams of three to five will compete first in an <strong>16 hour</strong> prototyping competition on <strong>February 15, 2014</strong>. A week later, on <strong>February 22, 2014</strong>, the <strong>top teams</strong> will return to MIT for a second opportunity to <strong>make their hacks</strong> with machine shop access and more materials.</p>
+                        </div>
+                </div>
+                <div class="row"><br><br></div>
+            </div>
+            </div>
+        </aside>
+        <!-- // End Parallax Aside -->
+        
+        
+
+        <!-- Begin About Section -->
+        <section id="sponsors" class="page-type bottom-arrow" style="background-image:url(images/triangles.png); background-size: cover; background-position: 50% -21px; margin-top: -100px;">
+            <div class="container">
+                <div class="row">
+                    <div class="span24 text-center">
+                        <h1 class="lowercase">Sponsors</h1>
+                    </div>
+                </div>
+      <div class="row" style="text-align:center;margin-bottom:10px">
+          <div class="span18 offset3">
+          <table style="width:inherit;" class="silver">
+              <tr>
+                <td colspan="2"><div class="sponsor"><a href="https://www.levantpower.com/"><img src="sponsors/levant.png" /></a></div></td>
+                
+                <td colspan="2"><div class="sponsor"><a href="http://www.formlabs.com/"><img src="sponsors/formlabs.png" style="max-width: 300px;" /></a></div></td>
+
+              </tr>
+              <tr>
+                <td colspan="2"><div class="sponsor"><a href="http://www.makerbot.com/"><img src="sponsors/makerbot.png" /></a></div></td>
+                <td colspan="2"><div class="sponsor"><a href="http://www.microsoft.com/en-us/kinectforwindows/"><img src="sponsors/kinect.png" /></a></div></td>
+
+              </tr>
+              <tr>
+                <td colspan="4"><span class="sponsor"><a href="https://www.eecs.mit.edu/"><img src="sponsors/eecs.png" /></a></span><span class="sponsor"><a href="http://www.raspberrypi.org/"><img src="sponsors/raspberry.png" /></a></span><span class="sponsor"><a href="http://signup.riserobotics.com/?r=http://www.crunchbase.com/company/urban-hero-sports"><img src="sponsors/rise.jpeg" /></a></span></td>
+
+              </tr>
+
+              <tr>
+                <td><div class="sponsor"><a href="http://blog.arduino.cc/2014/01/30/an-award-winning-lcd/#more-8802"><img src="sponsors/earth.JPG" /></a></div></td>
+                <td><div class="sponsor"><a href="http://tessel.io/"><img src="sponsors/tessel.png" /></a></div></td>
+                 <td><div class="sponsor"><a href="http://www.octopart.com/"><img src="sponsors/octopart.png" /></a></div></td>
+                <td><div class="sponsor"><a href="http://rre.com/"><img src="sponsors/RRE.png" /></a></div></td>
+              </tr>
+              <tr>
+                 <td><div class="sponsor"><a href="https://bolt.io/"><img id="bolt" src="sponsors/bolt.png" /></a></div></td>
+                 <td><div class="sponsor"><a href="http://www.instructables.com/"><img src="sponsors/instructables.png" /></a></div></td>
+                <td><div class="sponsor"><a href="http://www.dgftech.com/"><img src="sponsors/dgf.png" /></a></div></td>
+                <td><div class="sponsor"><a href="http://www.sparkfun.com/"><img src="sponsors/sparkfun.png" /></a></div></td>
+              </tr>
+              <tr>
+
+
+                <td><div class="sponsor"><a href="http://www.onion.io"><img src="sponsors/onion.png" /></a></div></td>
+                 <td><div class="sponsor"><a href="http://makezine.com/"><img src="sponsors/make.png" /></a></div></td>
+                 <td><div class="sponsor"><a href="http://www.bfec.com/"><img src="sponsors/bfec.png" /></a></div></td>
+
+                <td><div class="sponsor"><a href="http://www.adafruit.com/"><img src="sponsors/adafruit.png" /></a></div></td>
+
+              </tr>
+              <tr>
+                <td><div class="sponsor"><a href="http://www.grabcad.com/"><img src="sponsors/grabcad.png" /></a></div></td>
+                <td><div class="sponsor"><a href="http://www.sparkboard.com/"><img src="sponsors/sparkboard.png" /></a></div></td>
+              </tr>
+
+          </table>
+</div></div>
+
+<!--                 <div class="row">
+                    <div class="span24 text-center slogan" id="capitalize">
+                        <slogan>Want <slogan class="lowercase">your name here? </slogan><a class="slogan" id='capitalize' href="mailto:team@makemit.org">Contact <slogan class="lowercase">us!</slogan></a></slogan>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        <!-- // End About Section -->
+
+
+        <!-- Begin Seperator Aside -->
+        <aside id="faq" class="seperator-type parallax-type" stype="margin-top: -100px;">
+            <!-- Parallax -->
+            <div class="parallax one" style="background-image:url(images/mc2.jpg); background-size: 200%% auto"></div>
+            <!-- End Parallax -->
+        	<div class="container">
+                <div class="dark-bg">
+                <div class="row">
+                    <div class="span24 text-center">
+                        <h1 class="lowercase">FAQ</h1>
+                    </div>
+                </div>
+            	<div class="row">
+                		<div class="span9 offset2 minislogan3">
+                            <p><strong>How does it work?</strong><br>You'll work in teams of 3-5 hackers to make a product. We'll provide you with a bunch of materials, like microcontrollers, prototyping materials, and 3D printers, and lots of food to keep you fueled. The top teams from the first day will be invited back for a second round -- this time with machine shop access.</p>
+                            <p><strong>Who can attend?</strong><br>All undergraduate students are welcome. Keep in mind we're unable to provide travel reimbursement this year though!</p>
+                            <p><strong>What should I bring?</strong><br>You'll need your student ID to check-in and we recommend you bring a laptop for hacking! You can also feel free to bring in any of the materials that we list (coming soon!). Otherwise, if you'd like to bring something off-the-shelf that we are not providing, shoot us an <a href="mailto:team@makemit.org">email</a>. You will not be allowed to bring anything that has not been pre-approved.</p>
+                            <p><strong>What hardware will be available?</strong><br>There'll be a fleet of 3D printers from MakerBot and Formlabs, Microsoft Kinects, Arduinos, arLCDs, and much more. Check out the list <a href="http://makemit.org/hackers#tools">here</a>! If there's something you want to see but isn't there, drop us a line!</p>
+                        </div>
+                        <div class="span9 offset2 minislogan3">
+                            <p><strong>How much does it cost?</strong><br>This event is completely free! We'll provide food and drinks, and of course a plethora of materials and tools to hack with. Everything's on us!</p>
+                            <p><strong>What should I make?</strong><br>Whatever your heart desires. You can come in with an idea, but we ask that you do not start building or coding anything before the event starts. At the end of the day, your product can be anything, whether it's a proof of concept, looks-like-works-like model, critical module, a simulation, CAD renderings, or a prototype. Whatever you choose to make, that's how you'll sell your ideas to the judges.</p>
+                            <p><strong>How big should teams be? Can I sign up alone?</strong><br>Teams should be groups of 3-5 people.  If you have a team, have all your members register and then sign up for <a href="http://makemit.sparkboard.com/">SparkBoard</a>. You can use Sparkboard to discuss and share ideas. If you don't have a team, don't worry! Go ahead and register. Sign up for <a href="http://makemit.sparkboard.com/">SparkBoard</a> and use it to create, join, or discuss projects. By the time the fair rolls around, everyone will expected to have a team either preformed or made on Sparkboard.</p>
+                            <p><strong>I have a question not listed. Who do I ask?</strong><br>Get in touch with us through <a href="https://www.facebook.com/makemit">facebook</a>, <a href="https://twitter.com/TechX_MakeMIT">twitter</a>, or <a href="mailto:team@makemit.org">email</a>!</p>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </aside>
+        <!-- // End Seperator Aside -->
+
+        <!-- Begin About Section -->
+        <section id="contact" class="page-type dark-bg2" style="margin-top:-50px;">
+            <div class="container">
+                <div class="row">
+                    <div class="span24 text-center">
+                        <h1 class="lowercase">Contact Us</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span24">
+                        <div><p class='minislogan text-center'>Check us out on <a href="https://www.facebook.com/makemit">facebook</a> and <a href="https://twitter.com/TechX_MakeMIT">twitter</a>!</p>
+                        <p class='minislogan text-center'><strong>Don't see your question listed above or want to know more details?</strong><br>Shoot us an email at <a href="mailto:team@makemit.org">team@makemit.org</a>!</p>
+                        <p class= 'text-center'><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a><div class="fb-like text-center" data-href="https://www.facebook.com/makemit" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></p></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- // End About Section -->
+
+        <!-- Begin Google Maps Seperator -->
+
+        <!-- // End Google Maps Seperator -->
+        
+        <!-- Begin Footer -->
+        <footer class="footer-type">
+        	<div class="container">
+            	<div class="row">
+                	<div class="span24 text-center">
+                    		<p class="copyright">&copy; 2014 <a href="http://techx.mit.edu">MIT TechX</a>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- // End Footer -->
+        
+        
+        <!-- jQuery and Bootstrap -->
+		<script type="text/javascript" src="assets/js/jquery.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        
+        <!-- jQuery Plugins -->
+        <script type="text/javascript" src="assets/js/plugins/jquery.scrollTo.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.nav.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.parallax.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.hoverdir.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.isotope.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.magnific-popup.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.flexslider.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.tiledItems.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.tweet.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="assets/js/contact-form.js"></script>
+        <script type="text/javascript" src="assets/js/gmap3.min.js"></script>
+        
+        <!-- jQuery Custom -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+    
+        
+</body>
+</html>

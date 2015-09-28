@@ -1,0 +1,523 @@
+extends base.jade
+-load staticfiles
+| {% load pipeline %}
+
+block head
+  link(rel='stylesheet', href='{% static "stylesheets/review.css" %}')
+  script(type='text/javascript', src='{% static "lib/backstretch.min.js" %}')
+
+block body
+
+  nav#nav.ui.borderless.menu(data-0='opacity:0',
+    data-200='opacity:0', 
+    data-210-top='opacity: 1', 
+    data-anchor-target="#phase-1-slide")
+    div.ui.centered.grid
+      a.centered.grid.item(href='#phase-1-slide') 
+        div.link Phase 1
+      a.centered.grid.item(href='#phase-1-winners') 
+        div.link Phase 1 Winners
+      a.centered.grid.item(href='#phase-2-slide') 
+        div.link Phase 2
+      a.centered.grid.item(href='#phase-2-winners') 
+        div.link Phase 2 Winners
+      a.centered.grid.item(href='#contact-slide') 
+        div.link Contact
+  div#home-slide-background.parallax-image-wrapper.parallax-image-wrapper-100(
+      data-anchor-target="#home-slide"
+      data-top-top="transform: translate3d(0px, 100%, 0px);"
+      data-top-bottom="transform: translate3d(0px, 0%, 0px);"
+      )
+    div#home-slide-background-pictures.parallax-image.parallax-image-100(
+      data-anchor-target="#home-slide"
+      data-top-top="transform: translate3d(0px, 0%, 0px);"
+      data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+    )
+
+  div#phase-1-slide-background.parallax-image-wrapper.parallax-image-wrapper-100(
+      data-anchor-target="#phase-1-slide-picture"
+      data-bottom-top="transform: translate3d(0px, 200%, 0px);"
+      data-top-bottom="transform: translate3d(0px, 0%, 0px);"
+      )
+    div#phase-1-slide-background-pictures.parallax-image.parallax-image-100(
+      data-anchor-target="#phase-1-slide-picture"
+      style="background-image:url({% static 'images/taralee_158.jpeg' %})"
+      data-bottom-top="transform: translate3d(0px, -30%, 0px);"
+      data-top-bottom="transform: translate3d(0px, 40%, 0px);"
+    )
+
+  div#phase-2-slide-background.parallax-image-wrapper.parallax-image-wrapper-100(
+      data-anchor-target="#phase-2-slide-picture"
+      data-bottom-top="transform: translate3d(0px, 200%, 0px);"
+      data-top-bottom="transform: translate3d(0px, 0%, 0px);"
+      )
+    div#phase-2-slide-background-pictures.parallax-image.parallax-image-100(
+      data-anchor-target="#phase-2-slide-picture"
+      style="background-image:url({% static 'images/johnchow_54.jpeg' %})"
+      data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+      data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+    )
+
+  div#skrollr-body
+    section#home-slide.homeSlide
+      div.bcg
+        div.hsContainer
+          div.hsContent
+            h1 Make
+              span#title-accent MIT
+              | 2015
+                    
+            a#down-arrow(href='#phase-1-slide')
+              i.chevron.down.icon
+
+    section#phase-1-slide(data-menu-offset='-50')
+      div.bcg
+        div.hsContainer
+          div.hsContent
+            div.yellow
+              div.title
+                h1 Phase 1
+    section#phase-1-slide-picture
+    section#phase-1-info
+      div.bcg
+        div.hsContainer
+          div.hsContent
+            div.ui.one.wide.grid(style='margin-top:48vh')
+              div.middle.aligned.row
+                div.center.aligned.column
+                  div.header
+                    h3
+                      | After 15 hours of hacking, teams displayed
+                      | their projects in an Expo for judging.
+    section#phase-1-winners(data-menu-offset='-50')
+      div.bcg
+        div.hsContainer
+          div.hsContent
+            div.yellow
+              h1 Phase 1 Winners
+              
+            div.white
+              div.block-content
+                div.ui.one.wide.grid
+                  div.middle.aligned.row 
+                    div.column
+                      div.ui.fluid.accordion.styled.winners
+                        div.title
+                          div.ui.three.column.middle.aligned.grid
+                            div.row
+                              div.column
+                                i.large.trophy.icon(style='color:#C98910')
+                              div.center.aligned.column
+                                h2 YouLock  
+                              div.right.aligned.column                          
+                                i.dropdown.icon
+                        div.content
+                          div.ui.items
+                            div.item
+                              div.ui.medium.image
+                                img(src="{% static 'images/youlock.jpg' %}")
+                              
+                              div.content
+                                div.header Team WeLock
+                                div.meta  Atif Javed, Jen Cardona, Tristan Paine, Fiona Paine, Farhan Khan
+                                div.description
+                                  | Bike locks are heavy, cumbersome, and riders often lose their keys. 
+                                  | YouLock is a fixed locking mechanism installed on bike racks that allows 
+                                  | bikers to lock, unlock, and find their bike. It uses the Intel Edison and 
+                                  | Twilio SMS to pair a phone number with a rack and trigger the locking 
+                                  | mechanism with a mechanical servo. It includes a security feature that 
+                                  | notifies you when your bike is being tampered with. Say goodbye to annoying 
+                                  | locks for good!
+                        div.title 
+                          div.ui.three.column.middle.aligned.grid
+                            div.row
+                              div.column
+                                i.large.trophy.icon(style='color:#A8A8A8')
+                              div.center.aligned.column
+                                h2 Force Feel'd 
+                              div.right.aligned.column                          
+                                i.dropdown.icon
+                        div.content
+                          div.ui.items
+                            div.item
+                              div.ui.medium.image
+                                img(src="{% static 'images/forcefeeld2.jpg' %}")
+                              
+                              div.content
+                                div.header Team 16
+                                div.meta Everardo Rosales, Joshua Sloane, Meghana Bhat, Thomas Needham, Joanna Zhu
+                                div.description
+                                  | Virtual reality systems are becoming more commonplace and accessible, 
+                                  | though feedback systems are miles behind. Force Feel'd brings simple, 
+                                  | unidirectional force feedback to VR interfaces bridging mind and hand, 
+                                  | fully immersing the user in the developer's content.
+                        div.title 
+                          div.ui.middle.aligned.grid
+                            div.row
+                              div.three.wide.column
+                                i.large.trophy.icon(style='color:#965A38')
+                              div.ten.wide.center.aligned.column
+                                h2 Contour Modeler 
+                              div.three.wide.right.aligned.column                          
+                                i.dropdown.icon
+                        div.content
+                          div.ui.items
+                            div.item
+                              div.ui.medium.image
+                                img(src="{% static 'images/contour2.jpg' %}")
+                              
+                              div.content
+                                div.header Team 3D Rock
+                                div.meta Mitchell Gu, Jiahao Li, Travis Libsack, Joe Huang
+                                div.description
+                                  | A framework for 3D sketching that allows a user to use a "pen and paper" 
+                                  | interface to create 3D models. We triangulate the position using ultrasonic 
+                                  | rangefinder data from three counterweight heights sent from an Intel Edison. 
+                                  | Our 3D visualization client allows users to draw polygons, 3D surfaces, and 
+                                  | smooth curves depending on button input from the sketching pen.
+
+                      h3 Remaining Top Ten (Alphabetical Order)
+
+                      div.ui.fluid.accordion.styled.winners
+                        div.title 
+                          div.ui.middle.aligned.grid
+                            div.row
+                              div.three.wide.column
+                              div.ten.wide.center.aligned.column
+                                h3 CPR Rescue Guide
+                              div.three.wide.right.aligned.column                          
+                                i.dropdown.icon
+                        div.content
+                          div.ui.items
+                            div.item
+                              div.ui.medium.image
+                                img(src="{% static 'images/cpr2.jpg' %}")
+                              div.content
+                                div.header Team Heart Attackers
+                                div.meta Alyssa Dayan, Stacy Ho, Tomohiro Maeda, Mengjiao Yang
+                                div.description
+                                  | We constructed a device (with Arduino) to guide bystanders through the process
+                                  | of performing CPR. The device uses a speaker to sound an alarm when the patient
+                                  | has a heart attack and to voice CPR instructions. The device also uses an 
+                                  | accelerometer to provide feedback when the bystander isn't performing chest 
+                                  | compressions hard enough.
+                        
+                        div.title 
+                          div.ui.middle.aligned.grid
+                            div.row
+                              div.three.wide.column
+                              div.ten.wide.center.aligned.column
+                                h3 Dancing Tensegrity Robot
+                              div.three.wide.right.aligned.column                          
+                                i.dropdown.icon
+                        div.content
+                          div.ui.items
+                            div.item
+                              div.ui.medium.image
+                                img(src="{% static 'images/tensegrity.jpg' %}")
+                              div.content
+                                div.header Team "J" The First
+                                div.meta Marian Styer, Joyce Chen, James Payor, Beckett Colson
+                                div.description
+                                  | Tensegrity Robot: He dances! Made primarily of acrylic, fishing line,
+                                  | rubber bands, and pure unadulterated passion, this is one coordinated 
+                                  | fellow! He's even controlled by the Myo Armband!
+                        
+                        div.title 
+                          div.ui.middle.aligned.grid
+                            div.row
+                              div.three.wide.column
+                              div.ten.wide.center.aligned.column
+                                h3 Firefly
+                              div.three.wide.right.aligned.column                          
+                                i.dropdown.icon
+                        div.content
+                          div.ui.items
+                            div.item
+                              div.ui.medium.image
+                                img(src="{% static 'images/firefly_01.jpg' %}")                              
+                              div.content
+                                div.header Team Glastonbury Landscaping LLC
+                                div.meta Michelle Qiu, Robert Rudolph
+                                div.description
+                                  | FireFly is a lightbulb that can change warmth to adjust to a room's 
+                                  | lighting needs. During the day, FireFly can be set to produce bright 
+                                  | natural sunlight. At darker hours, FireFly throws a soft, warm glow
+                                  | that is friendlier on your eyes. Just like F.lux, for real life.
+                                  | A rotating collar at the base adjusts the warmth.
+                        
+                        div.title 
+                          div.ui.middle.aligned.grid
+                            div.row
+                              div.three.wide.column
+                              div.ten.wide.center.aligned.column
+                                h3 Handheld CNC Plotter 
+                              div.three.wide.right.aligned.column                          
+                                i.dropdown.icon
+                        div.content
+                          div.ui.items
+                            div.item
+                              div.ui.medium.image
+                                img(src="{% static 'images/cnc.jpg' %}")                              
+                              div.content
+                                div.header Team Autoplots
+                                div.meta Marshall Craft, John La, Jack Erdozain, Elliot Owen, Jimmy Mawdsley
+                                div.description
+                                  | CNC Drawing Robot, takes in vector files and traces over drawing. 
+                                  | Tracks motion so it can be shifted over and continue drawing if you want 
+                                  | to draw something larger than its range of motion.
+                        
+                        div.title 
+                          div.ui.middle.aligned.grid
+                            div.row
+                              div.three.wide.column
+                              div.ten.wide.center.aligned.column
+                                h3 Mesh-Network Gamma Spectrometer 
+                              div.three.wide.right.aligned.column                          
+                                i.dropdown.icon
+                        div.content
+                          div.ui.items
+                            div.item
+                              div.ui.medium.image
+                                img(src="{% static 'images/gamma.jpg' %}")                              
+                              div.content
+                                div.header Team MakeRadiation
+                                div.meta Jake Hecla, Danielius Kramnikius, Caitlin Fischer, Han Zhang, Banti Gheneti
+                                div.description
+                                  | Our device is designed to quantify and identify distributed radioisotope 
+                                  | contamination from a wide variety of sources. This approach avoids risk
+                                  | to civil/military personnel and vastly improves the ability to manage
+                                  | evacuation routes and prioritize resources in response to nuclear disaster.
+                                  | In comparison to most radiation-measurement beacons, these devices have
+                                  | the ability to discriminate between various radioisotopes using a compact
+                                  | gamma spectrometer. The devices are low-cost, and can be deployed en masse
+                                  | via an air-drop over the target zone. Each device communicates its data
+                                  | through a mesh network to a master unit, which uploads it to a webserver.
+                        
+                        div.title 
+                          div.ui.middle.aligned.grid
+                            div.row
+                              div.three.wide.column
+                              div.ten.wide.center.aligned.column
+                                h3 Rhyno 
+                              div.three.wide.right.aligned.column                          
+                                i.dropdown.icon
+                        div.content
+                          div.ui.items
+                            div.item
+                              div.ui.medium.image
+                                img(src="{% static 'images/rhyno.jpg' %}")                              
+                              div.content
+                                div.header Team Rhyno
+                                div.meta Ahmet Can Musabeyoglu, Birkan Uzun, Wegene Tadele
+                                div.description
+                                  | We are building a Cheap, Compact and Easy to Use ring called Rhyno that 
+                                  | detects simple gestures like swiping up, down, left and right as well
+                                  | as zooming in and out. It achieves this by making use of accelerometer
+                                  | and gyroscope sensor data. The ring also uses Bluetooth LE to communicate
+                                  | with any Bluetooth LE enabled devices and control them.
+                        
+                        div.title 
+                          div.ui.middle.aligned.grid
+                            div.row
+                              div.three.wide.column
+                              div.ten.wide.center.aligned.column
+                                h3 Securidesk 
+                              div.three.wide.right.aligned.column                          
+                                i.dropdown.icon
+                        div.content
+                          div.ui.items
+                            div.item
+                              div.ui.medium.image
+                                img(src="{% static 'images/securidesk2.jpg' %}")                              
+                              div.content
+                                div.header Team Crimson45
+                                div.meta Fiorella Vargas, Jessica Lam, Joy Hui, John Holland
+                                div.description
+                                  | Pressure sensitive mat that can be activated/deactivated using RFID. 
+                                  | When change in pressure is detected, alarm sounds, lights turned on,
+                                  | and user is sent an alert via email. Applications are for security
+                                  | of personal belongings when taking breaks (bathroom, food run, short
+                                  | walk or meeting) when working at library, cafe, dining hall etc.
+
+    
+    section#phase-2-slide(data-menu-offset='-50')
+      div.bcg
+        div.hsContainer
+          div.hsContent
+            div.yellow
+              div.title
+                h1 Phase 2
+    section#phase-2-slide-picture
+    section#phase-2-info
+      div.bcg
+        div.hsContainer
+          div.hsContent
+            div.ui.one.wide.grid(style='margin-top:48vh')
+              div.middle.aligned.row
+                div.center.aligned.column
+                  div.header
+                    h3
+                      | The top ten teams were invited back for 
+                      | a second weekend of hacking to refine their
+                      | projects.
+    section#phase-2-winners(data-menu-offset='-50')
+      div.bcg
+        div.hsContainer
+          div.hsContent
+            div.yellow
+              h1 Phase 2 Winners
+            
+            div.white
+              div.block-content
+                div.ui.one.wide.grid
+                  div.middle.aligned.row 
+                    div.column
+                      div.ui.fluid.accordion.styled.winners
+                        div.title
+                          div.ui.middle.aligned.grid
+                            div.row
+                              div.three.wide.column
+                                i.large.trophy.icon(style='color:#C98910')
+                              div.ten.wide.center.aligned.column
+                                h2 Contour Modeler 
+                              div.three.wide.right.aligned.column                          
+                                i.dropdown.icon
+                        div.content
+                          div.ui.items
+                            div.item
+                              div.ui.medium.image
+                                img(src="{% static 'images/contour2.jpg' %}")
+                              
+                              div.content
+                                div.header Team 3D Rock
+                                div.meta Mitchell Gu, Jiahao Li, Travis Libsack, Joe Huang
+                                div.description
+                                  | A framework for 3D sketching that allows a user to use a "pen and paper" 
+                                  | interface to create 3D models. We triangulate the position using ultrasonic 
+                                  | rangefinder data from three counterweight heights sent from an Intel Edison. 
+                                  | Our 3D visualization client allows users to draw polygons, 3D surfaces, and 
+                                  | smooth curves depending on button input from the sketching pen.
+
+                        div.title 
+                          div.ui.middle.aligned.grid
+                            div.row
+                              div.three.wide.column
+                                i.large.trophy.icon(style='color:#A8A8A8')
+                              div.ten.wide.center.aligned.column
+                                h2 Mesh-Network Gamma Spectrometer 
+                              div.three.wide.right.aligned.column                          
+                                i.dropdown.icon
+                        div.content
+                          div.ui.items
+                            div.item
+                              div.ui.medium.image
+                                img(src="{% static 'images/gamma.jpg' %}")                              
+                              div.content
+                                div.header Team MakeRadiation
+                                div.meta Jake Hecla, Danielius Kramnikius, Caitlin Fischer, Han Zhang, Banti Gheneti
+                                div.description
+                                  | Our device is designed to quantify and identify distributed radioisotope 
+                                  | contamination from a wide variety of sources. This approach avoids risk
+                                  | to civil/military personnel and vastly improves the ability to manage
+                                  | evacuation routes and prioritize resources in response to nuclear disaster.
+                                  | In comparison to most radiation-measurement beacons, these devices have
+                                  | the ability to discriminate between various radioisotopes using a compact
+                                  | gamma spectrometer. The devices are low-cost, and can be deployed en masse
+                                  | via an air-drop over the target zone. Each device communicates its data
+                                  | through a mesh network to a master unit, which uploads it to a webserver.
+
+                        div.title 
+                          div.ui.three.column.middle.aligned.grid
+                            div.row
+                              div.column
+                                i.large.trophy.icon(style='color:#965A38')
+                              div.center.aligned.column
+                                h2 Force Feel'd 
+                              div.right.aligned.column                          
+                                i.dropdown.icon
+                        div.content
+                          div.ui.items
+                            div.item
+                              div.ui.medium.image
+                                img(src="{% static 'images/forcefeeld2.jpg' %}")
+                              
+                              div.content
+                                div.header Team 16
+                                div.meta Everardo Rosales, Joshua Sloane, Meghana Bhat, Thomas Needham, Joanna Zhu
+                                div.description
+                                  | Virtual reality systems are becoming more commonplace and accessible, 
+                                  | though feedback systems are miles behind. Force Feel'd brings simple, 
+                                  | unidirectional force feedback to VR interfaces bridging mind and hand, 
+                                  | fully immersing the user in the developer's content.
+      
+    section#contact-slide
+      div.bcg
+        div.hsContainer
+          div.hsContent
+            div.logo
+                img(src='{% static "images/logo-mini.png" %}')
+            a(href="/")
+              h1 Make<span id="accent">MIT 2016</span>
+            div.contact
+              p Questions? Comments? Concerns?
+                br
+                | We'd love to hear from you.
+              a(href="mailto:team@makemit.org") 
+                i.mail.icon
+
+              a.social(href="https://www.facebook.com/makemit")
+                i.ui.icon.facebook
+              a.social(href="https://twitter.com/TeamMakeMIT")
+                i.ui.icon.twitter
+
+              p.footer Background photos courtesy of 
+                a.social(href="https://www.facebook.com/JohnWChow") John Chow
+                |  and 
+                a.social(href="https://www.facebook.com/tarabearie") Tara Lee
+
+   //- Initiate skrollr
+  script.
+    (function( $ ) {
+      
+      var s = skrollr.init({render: function(data) {
+
+          },
+      });
+      skrollr.menu.init(s,{animate:true});
+
+    })(jQuery);
+
+    $('.winners').accordion();
+
+    $("#home-slide-background-pictures").backstretch([
+      '{% static "images/backgrounds/johnchow_2.jpeg" %}',
+      '{% static "images/backgrounds/johnchow_5.jpeg" %}',
+      '{% static "images/backgrounds/johnchow_18.jpeg" %}',
+      '{% static "images/backgrounds/johnchow_25.jpeg" %}',
+      '{% static "images/backgrounds/johnchow_35.jpeg" %}',
+      '{% static "images/backgrounds/taralee_16.jpeg" %}',
+      '{% static "images/backgrounds/taralee_56.jpeg" %}',
+      '{% static "images/backgrounds/taralee_83.jpeg" %}'
+    ],{duration:3000,fade:750});
+    $("#phase-1-info").backstretch([
+      '{% static "images/phase1expo/photo1.jpeg" %}',
+      '{% static "images/phase1expo/photo2.jpeg" %}',
+      '{% static "images/phase1expo/taralee_102.jpeg" %}',
+      '{% static "images/phase1expo/taralee_104.jpeg" %}',
+      '{% static "images/phase1expo/taralee_111.jpeg" %}',
+      '{% static "images/phase1expo/taralee_127.jpeg" %}',
+      '{% static "images/phase1expo/taralee_130.jpeg" %}'
+    ],{duration:3000,fade:750});
+    $("#phase-2-info").backstretch([
+      '{% static "images/phase2/johnchow_56.jpeg" %}',
+      '{% static "images/phase2/johnchow_63.jpeg" %}',
+      '{% static "images/phase2/johnchow_67.jpeg" %}',
+      '{% static "images/phase2/johnchow_73.jpeg" %}',
+      '{% static "images/phase2/johnchow_78.jpeg" %}',
+      '{% static "images/phase2/johnchow_79.jpeg" %}',
+      '{% static "images/phase2/johnchow_81.jpeg" %}'
+    ],{duration:3000,fade:750});
+    //$('.ui.accordion').accordion('onOpen', function(){console.log('hi')});
+
+    //var scrollBottom = $(window).scrollTop() + $(window).height();

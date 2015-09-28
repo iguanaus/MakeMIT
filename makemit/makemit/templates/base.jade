@@ -1,0 +1,30 @@
+-load staticfiles
+| {% load pipeline %}
+doctype html
+
+html(xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#")
+  head
+    title MakeMIT 2015 | February 28, 2015
+    //- prevent loading to a fragment
+    script.
+      if (window.location.origin + window.location.pathname != window.location.href){
+        window.location = window.location.origin + window.location.pathname;
+      }
+    //- favicon
+
+    link(rel="icon", type="image/png", href='{% static "images/new_logo_black.png" %}')
+    //- stylesheet 'index'
+    link(href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Montserrat:400,700', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='{% static "lib/semantic.min.css" %}')
+    script(type='text/javascript', src='{% static "lib/jquery.js" %}')
+    script(type='text/javascript', src='{% static "lib/skrollr.min.js" %}')
+    script(type='text/javascript', src='{% static "lib/semantic.min.js" %}')
+    script(type='text/javascript', src='{% static "lib/skrollr.menu.min.js" %}')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="image_src" href="{% static 'images/meta.png'}")
+    meta(property="og:image" content="{% static 'images/meta.png'}")
+    meta(name="description" content="MakeMIT - A hardware hackathon promoting innovation that is geared towards those who are excited and passionate about designing and building. February 28, 2015 @ MIT.")
+    block head
+  body
+    block body
